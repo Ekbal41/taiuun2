@@ -1,24 +1,15 @@
 "use client";
 
 import {
-  Avatar,
   Box,
-  Button,
   Flex,
   HStack,
   IconButton,
   Link,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
   Stack,
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
-  AddIcon,
   AtSignIcon,
   ChatIcon,
   CloseIcon,
@@ -32,7 +23,7 @@ export default function Navbar() {
   return (
     <>
       <Box bg={"gray.800"} px={4}>
-        <Box maxW={"container.xl"} mx={"auto"}>
+        <Box maxW={"5xl"} mx={"auto"}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <HStack spacing={8} alignItems={"center"}>
               <Box
