@@ -1,162 +1,201 @@
 "use client";
 
 import {
-  Box,
-  Flex,
-  HStack,
-  IconButton,
-  Link,
-  Stack,
-  useDisclosure,
-} from "@chakra-ui/react";
-import {
-  AtSignIcon,
-  ChatIcon,
-  CloseIcon,
-  HamburgerIcon,
+  ChevronDownIcon,
+  InfoIcon,
+  QuestionOutlineIcon,
   Search2Icon,
+  SettingsIcon,
 } from "@chakra-ui/icons";
+import {
+  Avatar,
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Icon,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuGroup,
+  MenuItem,
+  MenuList,
+  Text,
+} from "@chakra-ui/react";
 
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
-    <>
-      <Box bg={"gray.800"} px={4}>
-        <Box maxW={"5xl"} mx={"auto"}>
-          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <HStack spacing={8} alignItems={"center"}>
+    <Box
+      borderBottom={"1px"}
+      borderColor={"gray.200"}
+    >
+      <Flex
+        justifyContent={"space-between"}
+        py={"18px"}
+        maxW={"8xl"}
+        mx={"auto"}
+        px={10}
+      >
+        <Flex alignItems={"center"} gap={"6"} fontSize={"lg"}>
+          <Heading
+            fontSize={"3xl"}
+          >
+            Enum.
+          </Heading>
+          <Text
+            py={"2"}
+            px={"4"}
+            rounded={"md"}
+            fontWeight={"semibold"}
+            _hover={{
+              bg: "gray.50",
+            }}
+            color={"gray.600"}
+          >
+            Dashboard
+          </Text>
+          <Menu isLazy>
+            <MenuButton
+              color={"gray.600"}
+              py={"2"}
+              px={"4"}
+              rounded={"md"}
+              fontWeight={"semibold"}
+              _hover={{
+                bg: "gray.50",
+              }}
+            >
+              My Business <Icon as={ChevronDownIcon} fontSize={20} />
+            </MenuButton>
+            <MenuList>
+              {/* MenuItems are not rendered unless Menu is open */}
+              <MenuItem>New Window</MenuItem>
+              <MenuItem>Open Closed Tab</MenuItem>
+              <MenuItem>Open File</MenuItem>
+            </MenuList>
+          </Menu>
+          <Menu isLazy>
+            <MenuButton
+              color={"gray.600"}
+              py={"2"}
+              px={"4"}
+              rounded={"md"}
+              fontWeight={"semibold"}
+              _hover={{
+                bg: "gray.50",
+              }}
+            >
+              Cources <Icon as={ChevronDownIcon} fontSize={20} />
+            </MenuButton>
+            <MenuList>
+              {/* MenuItems are not rendered unless Menu is open */}
+              <MenuItem>New Window</MenuItem>
+              <MenuItem>Open Closed Tab</MenuItem>
+              <MenuItem>Open File</MenuItem>
+            </MenuList>
+          </Menu>
+          <Menu isLazy>
+            <MenuButton
+              color={"gray.600"}
+              py={"2"}
+              px={"4"}
+              rounded={"md"}
+              fontWeight={"semibold"}
+              _hover={{
+                bg: "gray.50",
+              }}
+            >
+              Others <Icon as={ChevronDownIcon} fontSize={20} />
+            </MenuButton>
+            <MenuList>
+              {/* MenuItems are not rendered unless Menu is open */}
+              <MenuItem>New Window</MenuItem>
+              <MenuItem>Open Closed Tab</MenuItem>
+              <MenuItem>Open File</MenuItem>
+            </MenuList>
+          </Menu>
+        </Flex>
+        <Flex
+          alignItems={"center"}
+        >
+          <Button
+            bg={"white"}
+            color={"gray.600"}
+            _hover={{
+              bg: "gray.50",
+            }}
+          >
+            <Icon as={QuestionOutlineIcon} fontSize={20} />
+          </Button>
+          <Menu isLazy>
+            <MenuButton
+              ml={"4"}
+            >
+              <Avatar
+                h={"35px"}
+                w={"35"}
+                name="Ryan Florence"
+                src="https://bit.ly/ryan-florence"
+              />
+            </MenuButton>
+            <MenuList width={"270px"}>
+              {/* MenuItems are not rendered unless Menu is open */}
+              <Box px={"4"}>
+                <Flex alignItems={"center"} gap="2" mt={"6"} mb={"4"}>
+                  <Avatar
+                    h={"40px"}
+                    w={"40px"}
+                    name="Ryan Florence"
+                    src="https://bit.ly/ryan-florence"
+                  />
+                  <Box
+                    lineHeight={"1.2"}
+                  >
+                    <Text mb={"0"} fontWeight={"semibold"}>
+                      Asif Ekbal
+                    </Text>
+                    <Text color={"gray.600"}>
+                      asifekbal@gmail.com
+                    </Text>
+                  </Box>
+                </Flex>
+                <Button
+                  w={"full"}
+                  my={"4"}
+                  size={"md"}
+                  border={"1px"}
+                  bg={"white"}
+                  pb={"1"}
+                  h={"37px"}
+                  borderRadius={"sm"}
+                  _hover={{
+                    bg: "gray.700",
+                    color: "white",
+                  }}
+                >
+                  Open Tutor Panel
+                </Button>
+              </Box>
               <Box
-                color={"yellow.400"}
-                fontWeight={"bold"}
-                fontSize={"3xl"}
-                fontFamily={"cursive"}
+                fontSize={"17px"}
               >
-                ALPHA
-              </Box>
-              <HStack
-                as={"nav"}
-                spacing={4}
-                display={{ base: "none", md: "flex" }}
-              >
-                <Link
-                  px={2}
-                  py={1}
-                  rounded={"md"}
-                  fontWeight={"bold"}
-                  fontSize={"lg"}
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "gray.700",
-                  }}
-                  href={"#"}
-                  color={"yellow.400"}
-                >
-                  Explore
-                </Link>
-                <Link
-                  px={2}
-                  py={1}
-                  rounded={"md"}
-                  fontWeight={"bold"}
-                  fontSize={"lg"}
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "gray.700",
-                  }}
-                  href={"#"}
-                  color={"gray.400"}
-                >
-                  Top View
-                </Link>
-              </HStack>
-            </HStack>
-            <Flex alignItems={"center"} gap={2}>
-              <IconButton
-                size={"lg"}
-                icon={<Search2Icon />}
-                aria-label={"Open Menu"}
-                variant={"ghost"}
-                color={"gray.400"}
-                _hover={{
-                  bg: "gray.700",
-                }}
-              />
-              <IconButton
-                size={"lg"}
-                icon={<ChatIcon />}
-                aria-label={"Open Menu"}
-                variant={"ghost"}
-                color={"gray.400"}
-                _hover={{
-                  bg: "gray.700",
-                }}
-              />
-              <IconButton
-                size={"lg"}
-                icon={<AtSignIcon />}
-                aria-label={"Open Menu"}
-                variant={"ghost"}
-                color={"gray.400"}
-                _hover={{
-                  bg: "gray.700",
-                }}
-              />
-              <IconButton
-                size={"lg"}
-                mb={1}
-                icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                variant={"ghost"}
-                color={"yellow.400"}
-                _hover={{
-                  bg: "gray.700",
-                }}
-                display={{ md: "none" }}
-                onClick={isOpen ? onClose : onOpen}
-              />
-            </Flex>
-          </Flex>
+                <MenuDivider />
+                <MenuItem>Profile</MenuItem>
+                <MenuItem>Refer A Friend</MenuItem>
 
-          {isOpen
-            ? (
-              <Box pb={4} display={{ md: "none" }}>
-                <Stack as={"nav"} spacing={4}>
-                  <Link
-                    px={2}
-                    py={1}
-                    rounded={"md"}
-                    fontWeight={"bold"}
-                    fontSize={"lg"}
-                    _hover={{
-                      textDecoration: "none",
-                      bg: "gray.700",
-                    }}
-                    href={"#"}
-                    color={"yellow.400"}
-                  >
-                    Explore
-                  </Link>
-                  <Link
-                    px={2}
-                    py={1}
-                    rounded={"md"}
-                    fontWeight={"bold"}
-                    fontSize={"lg"}
-                    _hover={{
-                      textDecoration: "none",
-                      bg: "gray.700",
-                    }}
-                    href={"#"}
-                    color={"yellow.400"}
-                  >
-                    Top View
-                  </Link>
-                </Stack>
+                <MenuItem>Settings</MenuItem>
+                <MenuItem>Billings & Payments</MenuItem>
+                <MenuDivider />
+                <MenuItem>Docs</MenuItem>
+                <MenuItem>FAQ</MenuItem>
+                <MenuDivider />
+                <MenuItem>Logout</MenuItem>
               </Box>
-            )
-            : null}
-        </Box>
-      </Box>
-    </>
+            </MenuList>
+          </Menu>
+        </Flex>
+      </Flex>
+    </Box>
   );
 }

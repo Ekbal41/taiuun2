@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import { Box } from "@chakra-ui/react";
 import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,10 @@ export default function RootLayout({ children }) {
         {" "}
         <Providers>
           <Navbar />
-          <Box mx={"auto"} maxW={"container.8xl"}>
+          <Box mx={"auto"} maxW={"container.8xl"} bg={"gray.50"}>
             {children}
           </Box>
+          <Footer />
         </Providers>
       </body>
     </html>

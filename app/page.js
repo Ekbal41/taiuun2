@@ -6,9 +6,7 @@ import { Box } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-      <Box>
-        <Hero />
-      </Box>
+      <Box h={"85vh"}></Box>
     </>
   );
 }
