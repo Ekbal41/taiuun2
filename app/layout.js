@@ -1,6 +1,5 @@
 "use client";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import { Box } from "@chakra-ui/react";
 import Navbar from "@/components/shared/Navbar";

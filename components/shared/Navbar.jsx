@@ -40,81 +40,87 @@ export default function Navbar() {
         <Flex alignItems={"center"} gap={"6"} fontSize={"lg"}>
           <Heading
             fontSize={"3xl"}
+            color={"green.400"}
+            mb={2}
           >
-            Enum.
+            Taiuun
           </Heading>
-          <Text
-            py={"2"}
-            px={"4"}
-            rounded={"md"}
-            fontWeight={"semibold"}
-            _hover={{
-              bg: "gray.50",
-            }}
-            color={"gray.600"}
+          <Flex
+            display={{ base: "none", lg: "flex" }}
           >
-            Dashboard
-          </Text>
-          <Menu isLazy>
-            <MenuButton
-              color={"gray.600"}
+            <Text
               py={"2"}
               px={"4"}
-              rounded={"md"}
+              rounded={"lg"}
               fontWeight={"semibold"}
               _hover={{
                 bg: "gray.50",
               }}
-            >
-              My Business <Icon as={ChevronDownIcon} fontSize={20} />
-            </MenuButton>
-            <MenuList>
-              {/* MenuItems are not rendered unless Menu is open */}
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
-            </MenuList>
-          </Menu>
-          <Menu isLazy>
-            <MenuButton
               color={"gray.600"}
-              py={"2"}
-              px={"4"}
-              rounded={"md"}
-              fontWeight={"semibold"}
-              _hover={{
-                bg: "gray.50",
-              }}
             >
-              Cources <Icon as={ChevronDownIcon} fontSize={20} />
-            </MenuButton>
-            <MenuList>
-              {/* MenuItems are not rendered unless Menu is open */}
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
-            </MenuList>
-          </Menu>
-          <Menu isLazy>
-            <MenuButton
-              color={"gray.600"}
-              py={"2"}
-              px={"4"}
-              rounded={"md"}
-              fontWeight={"semibold"}
-              _hover={{
-                bg: "gray.50",
-              }}
-            >
-              Others <Icon as={ChevronDownIcon} fontSize={20} />
-            </MenuButton>
-            <MenuList>
-              {/* MenuItems are not rendered unless Menu is open */}
-              <MenuItem>New Window</MenuItem>
-              <MenuItem>Open Closed Tab</MenuItem>
-              <MenuItem>Open File</MenuItem>
-            </MenuList>
-          </Menu>
+              Dashboard
+            </Text>
+            <Menu isLazy>
+              <MenuButton
+                color={"gray.600"}
+                py={"2"}
+                px={"4"}
+                rounded={"lg"}
+                fontWeight={"semibold"}
+                _hover={{
+                  bg: "gray.50",
+                }}
+              >
+                My Business <Icon as={ChevronDownIcon} fontSize={20} />
+              </MenuButton>
+              <MenuList>
+                {/* MenuItems are not rendered unless Menu is open */}
+                <MenuItem>New Window</MenuItem>
+                <MenuItem>Open Closed Tab</MenuItem>
+                <MenuItem>Open File</MenuItem>
+              </MenuList>
+            </Menu>
+            <Menu isLazy>
+              <MenuButton
+                color={"gray.600"}
+                py={"2"}
+                px={"4"}
+                rounded={"lg"}
+                fontWeight={"semibold"}
+                _hover={{
+                  bg: "gray.50",
+                }}
+              >
+                Cources <Icon as={ChevronDownIcon} fontSize={20} />
+              </MenuButton>
+              <MenuList>
+                {/* MenuItems are not rendered unless Menu is open */}
+                <MenuItem>New Window</MenuItem>
+                <MenuItem>Open Closed Tab</MenuItem>
+                <MenuItem>Open File</MenuItem>
+              </MenuList>
+            </Menu>
+            <Menu isLazy>
+              <MenuButton
+                color={"gray.600"}
+                py={"2"}
+                px={"4"}
+                rounded={"lg"}
+                fontWeight={"semibold"}
+                _hover={{
+                  bg: "gray.50",
+                }}
+              >
+                Others <Icon as={ChevronDownIcon} fontSize={20} />
+              </MenuButton>
+              <MenuList>
+                {/* MenuItems are not rendered unless Menu is open */}
+                <MenuItem>New Window</MenuItem>
+                <MenuItem>Open Closed Tab</MenuItem>
+                <MenuItem>Open File</MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
         </Flex>
         <Flex
           alignItems={"center"}
@@ -163,7 +169,7 @@ export default function Navbar() {
                 <Button
                   w={"full"}
                   my={"4"}
-                  size={"md"}
+                  size={"lg"}
                   border={"1px"}
                   bg={"white"}
                   pb={"1"}
