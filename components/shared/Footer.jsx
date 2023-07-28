@@ -16,7 +16,14 @@ import { FaFacebookSquare, FaPinterestSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Box maxW={"8xl"} mx={"auto"} px={10}>
+    <Box
+      maxW={"8xl"}
+      mx={"auto"}
+      px={{
+        base: "4",
+        md: "10",
+      }}
+    >
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -263,7 +270,11 @@ export default function Footer() {
         borderColor={"gray.200"}
       >
         <Flex
-          justifyContent={"space-between"}
+          justifyContent={{
+            base: "center",
+            md: "space-between",
+          }}
+          alignItems={"center"}
           py={"18px"}
           direction={{ base: "column", md: "row" }}
         >
@@ -275,7 +286,7 @@ export default function Footer() {
             alignItems={"center"}
           >
             <Text fontWeight={"bold"} fontSize={"3xl"} color={"blackAlpha.600"}>
-              Taiuun
+              taiuun
             </Text>
             <Text color={"blackAlpha.600"} mt={"8px"} fontSize={"lg"}>
               © Taiuun Ltd
