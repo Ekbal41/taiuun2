@@ -64,7 +64,7 @@ export default function RootNavbar() {
             <Box>
               <Heading
                 fontSize={"3xl"}
-                color={"green.400"}
+                color={"green.500"}
                 mb={2}
               >
                 Taiuun
@@ -117,11 +117,7 @@ export default function RootNavbar() {
               <Button
                 ml={4}
                 textTransform={"uppercase"}
-                backgroundColor={"green.400"}
-                color={"white"}
-                _hover={{
-                  bg: "green.500",
-                }}
+                colorScheme="green"
               >
                 Join
               </Button>

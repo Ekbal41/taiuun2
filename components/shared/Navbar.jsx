@@ -59,7 +59,7 @@ export default function Navbar() {
           <Flex alignItems={"center"} gap={"4"} fontSize={"lg"}>
             <Heading
               fontSize={"3xl"}
-              color={"green.400"}
+              color={"green.500"}
               mb={2}
             >
               Taiuun
