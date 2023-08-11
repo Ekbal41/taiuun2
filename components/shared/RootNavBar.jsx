@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import NavDrawer from "./NavDrawer";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function RootNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -101,26 +102,30 @@ export default function RootNavbar() {
               >
                 Become a Seller
               </Text>
-              <Text
-                cursor={"pointer"}
-                py={"2"}
-                px={"4"}
-                rounded={"lg"}
-                fontWeight={"semibold"}
-                _hover={{
-                  bg: "gray.50",
-                }}
-                color={"gray.600"}
-              >
-                Sign In
-              </Text>
-              <Button
-                ml={4}
-                textTransform={"uppercase"}
-                colorScheme="green"
-              >
-                Join
-              </Button>
+              <Link href="/signin">
+                <Text
+                  cursor={"pointer"}
+                  py={"2"}
+                  px={"4"}
+                  rounded={"lg"}
+                  fontWeight={"semibold"}
+                  _hover={{
+                    bg: "gray.50",
+                  }}
+                  color={"gray.600"}
+                >
+                  Sign In
+                </Text>
+              </Link>
+              <Link href="/join">
+                <Button
+                  ml={4}
+                  textTransform={"uppercase"}
+                  colorScheme="green"
+                >
+                  Join
+                </Button>
+              </Link>
             </Flex>
           </Flex>
         </Flex>
