@@ -293,6 +293,7 @@ export default function Footer() {
             </Text>
           </Flex>
           <Flex
+            display={{ base: "none", md: "flex" }}
             alignItems={"center"}
             gap={2}
             justifyContent={"center"}

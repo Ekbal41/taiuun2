@@ -38,7 +38,7 @@ export default function Home() {
           <GridItem
             colSpan={{
               base: 6,
-              md: 2,
+              lg: 2,
             }}
             py={4}
           >
@@ -290,7 +290,7 @@ export default function Home() {
           <GridItem
             colSpan={{
               base: 6,
-              md: 4,
+              lg: 4,
             }}
             py={4}
           >

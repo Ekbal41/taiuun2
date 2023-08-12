@@ -102,6 +102,20 @@ export default function RootNavbar() {
               >
                 Become a Seller
               </Text>
+              <Link href="/dashboard">
+                <Text
+                  py={"2"}
+                  px={"4"}
+                  rounded={"lg"}
+                  fontWeight={"semibold"}
+                  _hover={{
+                    bg: "gray.50",
+                  }}
+                  color={"gray.600"}
+                >
+                  Dashboard
+                </Text>
+              </Link>
               <Link href="/signin">
                 <Text
                   cursor={"pointer"}

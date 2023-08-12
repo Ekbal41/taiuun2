@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import NavDrawer from "./NavDrawer";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -69,18 +70,20 @@ export default function Navbar() {
               ml={8}
               display={{ base: "none", lg: "flex" }}
             >
-              <Text
-                py={"2"}
-                px={"4"}
-                rounded={"lg"}
-                fontWeight={"semibold"}
-                _hover={{
-                  bg: "gray.50",
-                }}
-                color={"gray.600"}
-              >
-                Dashboard
-              </Text>
+              <Link href="/dashboard">
+                <Text
+                  py={"2"}
+                  px={"4"}
+                  rounded={"lg"}
+                  fontWeight={"semibold"}
+                  _hover={{
+                    bg: "gray.50",
+                  }}
+                  color={"gray.600"}
+                >
+                  Dashboard
+                </Text>
+              </Link>
               <Menu isLazy>
                 <MenuButton
                   color={"gray.600"}
@@ -164,7 +167,7 @@ export default function Navbar() {
               >
                 <Avatar
                   h={"35px"}
-                  w={"35"}
+                  w={"35px"}
                   name="Ryan Florence"
                   src="https://bit.ly/ryan-florence"
                 />
