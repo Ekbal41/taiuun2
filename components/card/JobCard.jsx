@@ -165,27 +165,21 @@ function DetailsDrawer({
                   }}
                   borderColor={"gray.100"}
                 >
-                  I want to develop an Ai driven ecommerce website.I need a
-                  website that can fetch the data -- from the internet on the
-                  user's prompt- Meaning-- "Blue dress for my birthday"-- It
-                  should show blue dresses in different styles (the key here is
-                  Al should know what kind of dresses a lady love to wear on a
-                  birthday and match it with available blue dresses on the
-                  internet for sale.)
-
-                  Some more facts--
-
-                  1. Glaze doesn't have an inventory of these brands. 2. They do
-                  NOT go to brands to onboard on
-
-                  useglaze.com Meaning-- the list of brands
-
-                  changes as per searches.
-
-                  3. once the order is in the cart-- user goes through a
-                  seamless order experience without knowing that the order
-                  actually going on the brand's website. It's all handled on the
-                  backend.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat. Duis aute irure dolor in reprehenderit
+                  in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                  in culpa qui officia deserunt mollit anim id est laborum.
                 </Box>
                 <Grid
                   px={8}
