@@ -75,19 +75,23 @@ export default function RootNavbar() {
             <Flex
               display={{ base: "none", lg: "flex" }}
             >
-              <Text
-                cursor={"pointer"}
-                py={"2"}
-                px={"4"}
-                rounded={"lg"}
-                fontWeight={"semibold"}
-                _hover={{
-                  bg: "gray.50",
-                }}
-                color={"gray.600"}
+              <Link
+                href={"/jobs"}
               >
-                Jobs
-              </Text>
+                <Text
+                  cursor={"pointer"}
+                  py={"2"}
+                  px={"4"}
+                  rounded={"lg"}
+                  fontWeight={"semibold"}
+                  _hover={{
+                    bg: "gray.50",
+                  }}
+                  color={"gray.600"}
+                >
+                  Find Job
+                </Text>
+              </Link>
 
               <Text
                 cursor={"pointer"}
