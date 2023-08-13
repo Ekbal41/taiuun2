@@ -78,14 +78,14 @@ export default function JobCard() {
         </Box>
         <Flex gap={4}>
           <Flex gap={2} alignItems={"center"}>
-            <Icon as={MdOutlinePayments} boxSize={4} color={"green"} />
+            <Icon as={MdOutlinePayments} boxSize={4} color={"green.500"} />
             <Text>500k</Text>
           </Flex>
           <Flex gap={2} alignItems={"center"}>
             <Icon
               as={MdOutlineMyLocation}
               boxSize={4}
-              color={"green"}
+              color={"green.500"}
             />
             <Text>Dhaka, Badda</Text>
           </Flex>
@@ -201,7 +201,7 @@ function DetailsDrawer({
                       <Icon
                         as={MdStars}
                         boxSize={4}
-                        color={"green"}
+                        color={"green.500"}
                         mt={1}
                       />
                       <Stack spacing={0}>
@@ -220,7 +220,7 @@ function DetailsDrawer({
                       <Icon
                         as={MdOutlinePayments}
                         boxSize={4}
-                        color={"green"}
+                        color={"green.500"}
                         mt={1}
                       />
                       <Stack spacing={0}>

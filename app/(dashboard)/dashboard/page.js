@@ -70,7 +70,7 @@ export default function Home() {
                     </Flex>
                   </Flex>
 
-                  <Icon as={EditIcon} color={"green.400"} boxSize={6} />
+                  <Icon as={EditIcon} color={"green.500"} boxSize={6} />
                 </Flex>
 
                 <Stack mt={4} spacing={1} fontSize={"sm"} color={"gray.600"}>
@@ -189,7 +189,7 @@ export default function Home() {
                           <Icon
                             as={MdCalendarMonth}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                         <Flex gap={2} alignItems={"center"}>
@@ -197,7 +197,7 @@ export default function Home() {
                           <Icon
                             as={MdOutlineMyLocation}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                         <Flex gap={2} alignItems={"center"}>
@@ -205,7 +205,7 @@ export default function Home() {
                           <Icon
                             as={MdOutlinePayments}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                       </Flex>
@@ -255,7 +255,7 @@ export default function Home() {
                           <Icon
                             as={MdCalendarMonth}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                         <Flex gap={2} alignItems={"center"}>
@@ -263,7 +263,7 @@ export default function Home() {
                           <Icon
                             as={MdOutlineMyLocation}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                         <Flex gap={2} alignItems={"center"}>
@@ -271,7 +271,7 @@ export default function Home() {
                           <Icon
                             as={MdOutlinePayments}
                             boxSize={4}
-                            color={"green"}
+                            color={"green.500"}
                           />
                         </Flex>
                       </Flex>
@@ -303,7 +303,7 @@ export default function Home() {
                 alignItems={"center"}
               >
                 <Heading size={"md"} color={"gray.600"} fontWeight={"semibold"}>
-                  <Icon as={BellIcon} mb={1} mr={2} color={"green.400"} />
+                  <Icon as={BellIcon} mb={1} mr={2} color={"green.500"} />
                   Jobs In Your Area
                   <Box as="span" ml={2} color={"gray.400"} fontSize={"lg"}>
                     (9)

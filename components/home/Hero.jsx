@@ -17,7 +17,7 @@ export default function Hero() {
         justifyContent={"center"}
         alignItems={"center"}
         minH={"calc(100vh - 72px)"}
-        backgroundColor={"green"}
+        backgroundColor={"green.500"}
         templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
       >
         <Box
@@ -47,6 +47,8 @@ export default function Hero() {
             mt={8}
             colorScheme={"green"}
             px={6}
+            border={"1px"}
+            borderColor={"white"}
           >
             Get Started
           </Button>
@@ -55,6 +57,8 @@ export default function Hero() {
             colorScheme={"green"}
             px={6}
             ml={4}
+            border={"1px"}
+            borderColor={"white"}
           >
             Learn More
           </Button>
