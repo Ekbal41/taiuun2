@@ -45,7 +45,7 @@ export default function Home() {
             <Stack spacing={4}>
               <Box
                 bg="white"
-                p={4}
+                p={8}
                 shadow={"xs"}
                 justifyContent={"space-between"}
               >
@@ -108,7 +108,7 @@ export default function Home() {
               </Box>
               <Box
                 bg="white"
-                p={4}
+                p={8}
                 shadow={"xs"}
                 justifyContent={"space-between"}
               >
@@ -138,7 +138,10 @@ export default function Home() {
               </Box>
               <Box
                 bg="white"
-                p={4}
+                p={{
+                  base: 4,
+                  md: 8,
+                }}
                 shadow={"xs"}
                 justifyContent={"space-between"}
               >
@@ -210,11 +213,9 @@ export default function Home() {
                         </Flex>
                       </Flex>
                     </Flex>
-                    <Text color={"gray.600"} ps={16}>
+                    <Text ps={16}>
                       To achieve this, you need to pass the colSpan prop to the
-                      GridItem component to span across columns and also pass
-                      the rowSpan component to span across rows. You also need
-                      to specify the templateColumns and templateRows.
+                      GridItem component to span across columns and also pass.
                     </Text>
                   </Box>
                   <Box>
@@ -276,7 +277,7 @@ export default function Home() {
                         </Flex>
                       </Flex>
                     </Flex>
-                    <Text color={"gray.600"} ps={16}>
+                    <Text ps={16}>
                       To achieve this, you need to pass the colSpan prop to the
                       GridItem component to span across columns and also pass
                       the rowSpan component to span across rows. You also need
@@ -297,15 +298,20 @@ export default function Home() {
             <Stack spacing={4}>
               <Flex
                 bg="white"
-                p={4}
+                px={6}
+                py={4}
                 shadow={"xs"}
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Heading size={"md"} color={"gray.600"} fontWeight={"semibold"}>
+                <Heading
+                  size={"md"}
+                  color={"blackAlpha.700"}
+                  fontWeight={"semibold"}
+                >
                   <Icon as={BellIcon} mb={1} mr={2} color={"green.500"} />
                   Jobs In Your Area
-                  <Box as="span" ml={2} color={"gray.400"} fontSize={"lg"}>
+                  <Box as="span" ml={2} color={"green.400"} fontSize={"lg"}>
                     (9)
                   </Box>
                 </Heading>

@@ -3,26 +3,20 @@
 import {
   Box,
   Button,
-  Container,
   Flex,
   Grid,
   GridItem,
-  Heading,
   Icon,
   Image,
-  SimpleGrid,
   Stack,
-  StackDivider,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
+
 import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from "react-icons/io5";
-import { ReactElement } from "react";
-import { MdOutlinePayments } from "react-icons/md";
+  MdOutlineArticle,
+  MdOutlineBusinessCenter,
+  MdOutlinePayments,
+} from "react-icons/md";
 
 export default function OurStory() {
   return (
@@ -30,13 +24,15 @@ export default function OurStory() {
       <Box
         maxW={"8xl"}
         px={{
-          base: "8",
-          md: "20",
+          base: "4",
+          md: "10",
         }}
+        mx={"auto"}
       >
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
-          py={"28"}
+          pt={"20"}
+          pb={10}
           gap={12}
         >
           <GridItem
@@ -45,25 +41,28 @@ export default function OurStory() {
             alignItems={"center"}
           >
             <Box
-              p={4}
-              bg={"green.100"}
-              w={"full"}
-              h={"96"}
-              rounded={"md"}
+              boxSize={{
+                base: "xs",
+                md: "lg",
+              }}
+              pt={10}
             >
+              <Image
+                src="https://th.bing.com/th/id/R.766a986eb830ba26af531a5252c9f5ee?rik=I7xmI5F%2bdK3lEg&pid=ImgRaw&r=0"
+                alt="Dan Abramov"
+                rounded={"lg"}
+                shadow={"2xl"}
+              />
             </Box>
           </GridItem>
           <GridItem>
-            <Heading
-              as={"h2"}
-              fontSize={"4xl"}
-              fontWeight={"500"}
-              style={{
-                fontFamily: "cursive",
-              }}
+            <Text
+              fontSize={"5xl"}
+              fontWeight={"400"}
+              className="font-mirza"
             >
-              Lorem ipsum dolor sit amet
-            </Heading>
+              Lorem ipsum dolor
+            </Text>
             <Stack mt={8} spacing={4}>
               <Flex
                 justifyContent={"start"}
@@ -93,7 +92,7 @@ export default function OurStory() {
                 gap={2}
               >
                 <Icon
-                  as={MdOutlinePayments}
+                  as={MdOutlineArticle}
                   boxSize={8}
                   color={"green.500"}
                 />
@@ -116,7 +115,7 @@ export default function OurStory() {
                 gap={2}
               >
                 <Icon
-                  as={MdOutlinePayments}
+                  as={MdOutlineBusinessCenter}
                   boxSize={8}
                   color={"green.500"}
                 />
@@ -144,6 +143,7 @@ export default function OurStory() {
                   Sign up for free
                 </Button>
                 <Button
+                  variant={"outline"}
                   colorScheme={"green"}
                 >
                   Learn how to hire

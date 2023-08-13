@@ -8,7 +8,6 @@ import {
   Button,
   Drawer,
   DrawerBody,
-  DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
@@ -22,9 +21,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import {
+  MdFavoriteBorder,
   MdFlag,
   MdOutlineMyLocation,
   MdOutlinePayments,
+  MdOutlineThumbDownAlt,
   MdShare,
   MdStars,
 } from "react-icons/md";
@@ -33,64 +34,116 @@ export default function JobCard() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Stack
-        onClick={() => onOpen()}
-        bg="white"
-        p={4}
-        shadow={"xs"}
-        spacing={4}
-        _hover={{
-          transition: "all 0.2s",
-          cursor: "pointer",
-          backgroundColor: "green.50",
-          "& .heading": {
-            color: "green.500",
-          },
-        }}
-      >
-        <Flex justifyContent={"space-between"} alignItems={"center"}>
-          {" "}
-          <Heading
-            size={"md"}
-            color={"green.500"}
-            fontWeight={"semibold"}
+      <Box position={"relative"}>
+        <Stack
+          direction={"row"}
+          spacing={2}
+          pos={"absolute"}
+          top={4}
+          right={4}
+        >
+          <Button
+            rounded={"full"}
+            width={{
+              base: "30px",
+              md: "45px",
+            }}
+            h={{
+              base: "35px",
+              md: "45px",
+            }}
+            bg={"white"}
+            shadow={"xs"}
           >
-            Need a babysitter for 2 kids
-          </Heading>
-          <Icon as={MdShare} boxSize={6} color={"green.500"} />
-        </Flex>
-        <Box>
-          In some layouts, you may need certain grid items to span specific
-          amount of columns or rows instead of an even distribution. To achieve
-          this, you need to pass the colSpan prop to the GridItem component to
-          span across columns and also pass the rowSpan component to span across
-          rows. You also need to specify the templateColumns and templateRows.
-          In some layouts, you may need certain grid items to span specific
-          amount of columns or rows instead of an even distribution. To achieve
-          this, you need to pass the colSpan prop to the GridItem component to
-          span across columns and also pass the rowSpan component to span across
-          rows. You also need to specify the templateColumns and templateRows.
-          In some layouts, you may need certain grid items to span specific
-          amount of columns or rows instead of an even distribution. To achieve
-          this, you need to pass the colSpan prop to the GridItem component to
-          span across columns and also pass the rowSpan component to span across
-          rows. You also need to specify the templateColumns and templateRows.
-        </Box>
-        <Flex gap={4}>
-          <Flex gap={2} alignItems={"center"}>
-            <Icon as={MdOutlinePayments} boxSize={4} color={"green.500"} />
-            <Text>500k</Text>
-          </Flex>
-          <Flex gap={2} alignItems={"center"}>
             <Icon
-              as={MdOutlineMyLocation}
-              boxSize={4}
+              as={MdOutlineThumbDownAlt}
               color={"green.500"}
+              boxSize={6}
             />
-            <Text>Dhaka, Badda</Text>
+          </Button>
+          <Button
+            bg={"white"}
+            shadow={"xs"}
+            width={{
+              base: "30px",
+              md: "45px",
+            }}
+            h={{
+              base: "35px",
+              md: "45px",
+            }}
+            rounded={"full"}
+          >
+            <Icon as={MdFavoriteBorder} boxSize={6} color={"green.500"} />
+          </Button>
+        </Stack>
+        <Stack
+          onClick={() => onOpen()}
+          bg="white"
+          p={8}
+          shadow={"xs"}
+          spacing={4}
+          _hover={{
+            transition: "all 0.2s",
+            cursor: "pointer",
+            backgroundColor: "green.50",
+            "& .heading": {
+              color: "green.500",
+            },
+          }}
+        >
+          <Flex justifyContent={"space-between"} alignItems={"center"}>
+            {" "}
+            <Heading
+              size={"md"}
+              color={"green.500"}
+              fontWeight={"semibold"}
+              maxW={{
+                base: "70%",
+                md: "80%",
+              }}
+              _hover={{
+                color: "green.500",
+                textDecoration: "underline",
+              }}
+            >
+              Need a babysitter for two toddlers
+            </Heading>
           </Flex>
-        </Flex>
-      </Stack>
+          <Box>
+            In some layouts, you may need certain grid items to span specific
+            amount of columns or rows instead of an even distribution. To
+            achieve this, you need to pass the colSpan prop to the GridItem
+            component to span across columns and also pass the rowSpan component
+            to span across rows. You also need to specify the templateColumns
+            and templateRows. In some layouts, you may need certain grid items
+            to span specific amount of columns or rows instead of an even
+            distribution. To achieve this, you need to pass the colSpan prop to
+            the GridItem component to span across columns and also pass the
+            rowSpan component to span across rows. You also need to specify the
+            templateColumns and templateRows. In some layouts, you may need
+            certain grid items to span specific amount of columns or rows
+            instead of an even distribution. To achieve this, you need to pass
+            the colSpan prop to the GridItem component to span across columns
+            and also pass the rowSpan component to span across rows. You also
+            need to specify the templateColumns and templateRows.
+          </Box>
+          <Flex gap={4}>
+            <Flex gap={2} alignItems={"center"}>
+              <Icon as={MdOutlinePayments} boxSize={4} color={"green.500"} />
+              <Text>500k</Text>
+            </Flex>
+            <Flex gap={2} alignItems={"center"}>
+              <Icon
+                as={MdOutlineMyLocation}
+                boxSize={4}
+                color={"green.500"}
+              />
+              <Text>Dhaka, Badda</Text>
+            </Flex>
+          </Flex>
+        </Stack>
+      </Box>
 
       <DetailsDrawer
         onClose={onClose}
@@ -186,10 +239,7 @@ function DetailsDrawer({
                   py={4}
                   borderLeft={"1px"}
                   borderTop={"1px"}
-                  borderRight={{
-                    base: "1px",
-                    md: "none",
-                  }}
+                  borderRight={"1px"}
                   borderColor={"gray.100"}
                   templateColumns="repeat(2, 1fr)"
                 >
@@ -365,12 +415,13 @@ function DetailsDrawer({
                     </Text>
 
                     <Box
-                      bg={"gray.100"}
+                      bg={"blackAlpha.50"}
                       p={2}
                       borderRadius={"md"}
                       border="1px"
                       borderColor="gray.100"
-                      color={"gray.500"}
+                      color={"blackAlpha.700"}
+                      fontFamily={"monospace"}
                       _hover={{
                         cursor: "pointer",
                         backgroundColor: "green.50",

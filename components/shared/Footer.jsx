@@ -50,7 +50,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Programming
             </Link>
             <Link
               fontSize={"lg"}
@@ -58,16 +58,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
-            </Link>
-
-            <Link
-              fontSize={"lg"}
-              color={"blackAlpha.600"}
-              mb={3}
-              fontWeight={500}
-            >
-              Lorem uptao
+              Web Development
             </Link>
 
             <Link
@@ -76,7 +67,16 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Mobile Development
+            </Link>
+
+            <Link
+              fontSize={"lg"}
+              color={"blackAlpha.600"}
+              mb={3}
+              fontWeight={500}
+            >
+              Data Science
             </Link>
           </Flex>
         </GridItem>
@@ -96,7 +96,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Digital Marketing
             </Link>
             <Link
               fontSize={"lg"}
@@ -104,16 +104,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
-            </Link>
-
-            <Link
-              fontSize={"lg"}
-              color={"blackAlpha.600"}
-              mb={3}
-              fontWeight={500}
-            >
-              Lorem uptao
+              Graphics Designing
             </Link>
 
             <Link
@@ -122,7 +113,16 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Video Editing
+            </Link>
+
+            <Link
+              fontSize={"lg"}
+              color={"blackAlpha.600"}
+              mb={3}
+              fontWeight={500}
+            >
+              SEO
             </Link>
           </Flex>
         </GridItem>{" "}
@@ -142,7 +142,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              AI & ML
             </Link>
             <Link
               fontSize={"lg"}
@@ -150,16 +150,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
-            </Link>
-
-            <Link
-              fontSize={"lg"}
-              color={"blackAlpha.600"}
-              mb={3}
-              fontWeight={500}
-            >
-              Lorem uptao
+              UI/UX Designing
             </Link>
 
             <Link
@@ -168,7 +159,16 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Game Development
+            </Link>
+
+            <Link
+              fontSize={"lg"}
+              color={"blackAlpha.600"}
+              mb={3}
+              fontWeight={500}
+            >
+              Wordpress
             </Link>
           </Flex>
         </GridItem>{" "}
@@ -188,7 +188,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Business
             </Link>
             <Link
               fontSize={"lg"}
@@ -196,16 +196,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
-            </Link>
-
-            <Link
-              fontSize={"lg"}
-              color={"blackAlpha.600"}
-              mb={3}
-              fontWeight={500}
-            >
-              Lorem uptao
+              Finance & Accounting
             </Link>
 
             <Link
@@ -214,7 +205,16 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Personal Development
+            </Link>
+
+            <Link
+              fontSize={"lg"}
+              color={"blackAlpha.600"}
+              mb={3}
+              fontWeight={500}
+            >
+              IT & Software
             </Link>
           </Flex>
         </GridItem>{" "}
@@ -234,7 +234,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Marketing
             </Link>
             <Link
               fontSize={"lg"}
@@ -242,16 +242,7 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
-            </Link>
-
-            <Link
-              fontSize={"lg"}
-              color={"blackAlpha.600"}
-              mb={3}
-              fontWeight={500}
-            >
-              Lorem uptao
+              Health & Fitness
             </Link>
 
             <Link
@@ -260,7 +251,16 @@ export default function Footer() {
               mb={3}
               fontWeight={500}
             >
-              Lorem uptao
+              Music
+            </Link>
+
+            <Link
+              fontSize={"lg"}
+              color={"blackAlpha.600"}
+              mb={3}
+              fontWeight={500}
+            >
+              Photography
             </Link>
           </Flex>
         </GridItem>
