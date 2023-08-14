@@ -81,7 +81,7 @@ export default function OurStory() {
                     fontSize={"md"}
                     color={"gray.700"}
                   >
-                    Post your job on the world's work marketplace and wait for
+                    Post your job on the worlds work marketplace and wait for
                     the proposals to flood in from talented people around the
                     world.
                   </Text>
