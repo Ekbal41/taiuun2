@@ -1,26 +1,26 @@
 import { StarIcon } from "@chakra-ui/icons";
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 
-export default function CategoryCard() {
+export default function CategoryCard({ title }) {
   return (
     <>
       <Box
         p={4}
-        bg={"blackAlpha.50"}
+        bg={"gray.50"}
         rounded={"md"}
         minH={"36"}
         cursor={"pointer"}
         shadow={"xs"}
+        transition={"all .3s ease"}
         _hover={{
-          shadow: "md",
-          bg: "blackAlpha.100",
+          bg: "gray.100",
         }}
       >
         <Text
           fontSize={"2xl"}
           fontWeight={"500"}
         >
-          Writing and Translation
+          {title}
         </Text>
         <Flex
           justifyContent={"space-between"}
@@ -32,7 +32,7 @@ export default function CategoryCard() {
             alignItems={"center"}
             gap={2}
           >
-            <Icon as={StarIcon} color={"yellow.400"} w={6} h={6} />
+            <Icon as={StarIcon} color={"green.600"} w={5} h={5} />
             <Text
               fontSize={"xl"}
               color={"blackAlpha.700"}

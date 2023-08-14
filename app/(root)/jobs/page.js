@@ -149,8 +149,11 @@ export default function Home() {
                 alignItems={"center"}
                 gap={4}
               >
-                <Input placeholder="Search here..." />
-                <Button colorScheme={"green"}>
+                <Input
+                  placeholder="Search here..."
+                  focusBorderColor="green.500"
+                />
+                <Button colorScheme={"green"} pb={1}>
                   <Icon as={MdSearch} boxSize={6} mt={1} />
                   <Text
                     ml={1}
@@ -200,7 +203,7 @@ export default function Home() {
                     </Text>
                     <Box>
                       {" "}
-                      <Select size={"sm"}>
+                      <Select size={"sm"} focusBorderColor="green.500">
                         <option value="option1">Newest</option>
                         <option value="option2">Relevance</option>
                         <option value="option3">Oldest</option>

@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Stack, Text } from "@chakra-ui/react";
+import { SunIcon } from "@chakra-ui/icons";
+import { Box, Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 
 export default function Action() {
   return (
@@ -20,8 +21,9 @@ export default function Action() {
           px={8}
           pb={8}
           pt={4}
+          direction={{ base: "column", lg: "row" }}
         >
-          <Stack>
+          <Stack order={{ base: 2, lg: 1 }}>
             <Text
               fontSize={"5xl"}
               fontWeight={"400"}
@@ -41,7 +43,17 @@ export default function Action() {
               Sign Up
             </Button>
           </Stack>
-          <Box></Box>
+          <Box
+            pr={8}
+            pt={3}
+            order={{ base: 1, lg: 2 }}
+            mb={{
+              base: 8,
+              lg: 0,
+            }}
+          >
+            <Icon as={SunIcon} color={"green.600"} w={20} h={20} />
+          </Box>
         </Flex>
       </Box>
     </>

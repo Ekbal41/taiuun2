@@ -350,12 +350,13 @@ export default function Footer() {
               _hover={{
                 bg: "gray.100",
               }}
-              mr={6}
+              
             >
               <Icon as={BsInstagram} fontSize={20} />
             </Button>
-            <Button
+            {/* <Button
               bg={"white"}
+              ml={6}
               color={"blackAlpha.600"}
               rounded={"full"}
               _hover={{
@@ -363,7 +364,7 @@ export default function Footer() {
               }}
             >
               <Icon as={BsGlobe} fontSize={16} mr={2} /> English
-            </Button>
+            </Button> */}
           </Flex>
         </Flex>
       </Box>

@@ -24,7 +24,6 @@ export default function Hero() {
         <Grid
           justifyContent={"space-between"}
           alignItems={"center"}
-          minH={"calc(100vh - 72px)"}
           templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         >
           <Box
@@ -83,6 +82,7 @@ export default function Hero() {
             flex={1}
             justifyContent={"center"}
             alignItems={"center"}
+            pt={8}
           >
             <Image
               src="/header.png"

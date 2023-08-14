@@ -36,28 +36,44 @@ export default function Category() {
           mt={10}
         >
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Web Development"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"UI/UX Design"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Mobile Development"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Data Science"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Digital Marketing"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Content Writing"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Video Editing"}
+            />
           </GridItem>
           <GridItem>
-            <CategoryCard />
+            <CategoryCard
+              title={"Photography"}
+            />
           </GridItem>
         </Grid>
       </Box>

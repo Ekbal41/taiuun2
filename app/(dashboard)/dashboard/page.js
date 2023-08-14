@@ -315,7 +315,9 @@ export default function Home() {
                     (9)
                   </Box>
                 </Heading>
-                <Select placeholder="Filter By" w={"38"}>
+                <Select placeholder="Filter By" w={"38"}
+                focusBorderColor="green.500"
+                >
                   <option value="option1">All</option>
                   <option value="option1">Male</option>
                   <option value="option2">Female</option>
