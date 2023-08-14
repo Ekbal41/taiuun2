@@ -21,14 +21,14 @@ export default function Category() {
           fontWeight={"400"}
           className="font-mirza"
         >
-          Lorem ipsum dolor
+          Populer Categories
         </Text>
         <Text
           fontSize={"xl"}
           fontWeight={600}
           color={"blackAlpha.700"}
         >
-          Looking for Jobs?
+          Find what you need in one click
         </Text>
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}

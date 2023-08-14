@@ -124,7 +124,6 @@ export default function RootNavbar() {
                   _hover={{
                     bg: "gray.50",
                   }}
-                  rightIcon={<ChevronDownIcon />}
                 >
                   Category <Icon as={ChevronDownIcon} />
                 </MenuButton>

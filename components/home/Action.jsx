@@ -30,14 +30,15 @@ export default function Action() {
               className="font-mirza"
               lineHeight={0.9}
             >
-              Lorem ipsum dolor
+              We are here to help you
             </Text>
             <Text
               fontSize={"xl"}
               fontWeight={600}
               color={"blackAlpha.700"}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              Be a part of our community &amp; let us help you to reach your
+              goals and full potential.
             </Text>
             <Button colorScheme="green" px={8} w={"min-content"} mt={4}>
               Sign Up

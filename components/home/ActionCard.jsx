@@ -27,7 +27,15 @@ export default function ActionCard() {
           alignItems={"center"}
           bg={"gray.50"}
         >
-          <Box p={8} backgroundColor={"green.700"} order={{ base: 2, lg: 1 }}>
+          <Box
+            p={8}
+            backgroundColor={"green.700"}
+            order={{ base: 2, lg: 1 }}
+            borderRadius={{
+              base: "0px 0px 10px 10px",
+              lg: "10px 0px 0px 10px",
+            }}
+          >
             <Stack>
               <Text
                 fontSize={"5xl"}
@@ -43,23 +51,55 @@ export default function ActionCard() {
                 fontWeight={"400"}
                 className="font-mirza"
                 lineHeight={0.9}
-                color={"green.500"}
+                color={"green.300"}
               >
                 Lorem ipsum dolor sit amet consectetur Quisquam
               </Text>
               <Text
-                fontSize={"xl"}
+                my={3}
+                fontSize={"lg"}
                 color={"white"}
               >
-                doloremque magni minima expedita sed ut, voluptate a id,
-                nostrum, quos non autem sequi odit. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Hic commodi cum explicabo
-                reiciendis facere architecto atque maiores ut optio quaerat.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Aliquam iusto quisquam nisi saepe architecto quae beatae
-                deserunt optio? Similique, ea.
+                Access the top 10% of talent on Taiuun, and get the job done. We
+                have the best teachers and advisors in the market right now.
               </Text>
-              <Button px={8} w={"min-content"} mt={4} color={"green.500"}>
+              <Stack spacing={2}>
+                <Flex
+                  alignItems={"center"}
+                  gap={2}
+                >
+                  <Icon as={SunIcon} color={"green.300"} boxSize={6} />
+                  <Text ml={2} fontSize={"lg"} color={"white"}>
+                    Expert Teachers and Advisors
+                  </Text>
+                </Flex>
+                <Flex
+                  alignItems={"center"}
+                  gap={2}
+                >
+                  <Icon as={SunIcon} color={"green.300"} boxSize={6} />
+                  <Text ml={2} fontSize={"lg"} color={"white"}>
+                    Unlimited Access to Course Materials
+                  </Text>
+                </Flex>{" "}
+                <Flex
+                  alignItems={"center"}
+                  gap={2}
+                >
+                  <Icon as={SunIcon} color={"green.300"} boxSize={6} />
+                  <Text fontSize={"lg"} ml={2} color={"white"}>
+                    Most Affordable Course Fees in the Market
+                  </Text>
+                </Flex>
+              </Stack>
+
+              <Button
+                px={8}
+                w={"min-content"}
+                mt={4}
+                color={"green.500"}
+                bg={"white"}
+              >
                 Learn More
               </Button>
             </Stack>
@@ -68,6 +108,14 @@ export default function ActionCard() {
             order={{ base: 1, lg: 2 }}
           >
             <Image
+              _hover={{
+                filter: "brightness(0.8)",
+              }}
+              transition={"all 0.3s ease"}
+              borderRadius={{
+                base: "10px 10px 0px 0px",
+                lg: "0px 10px 10px 0px",
+              }}
               src="https://th.bing.com/th/id/R.766a986eb830ba26af531a5252c9f5ee?rik=I7xmI5F%2bdK3lEg&pid=ImgRaw&r=0"
               alt="Dan Abramov"
               w={"full"}

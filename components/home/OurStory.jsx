@@ -61,7 +61,7 @@ export default function OurStory() {
               fontWeight={"400"}
               className="font-mirza"
             >
-              Lorem ipsum dolor
+              Get started with us
             </Text>
             <Stack mt={8} spacing={4}>
               <Flex
@@ -81,9 +81,9 @@ export default function OurStory() {
                     fontSize={"md"}
                     color={"gray.700"}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. lorem
+                    Post your job on the world's work marketplace and wait for
+                    the proposals to flood in from talented people around the
+                    world.
                   </Text>
                 </Stack>
               </Flex>
@@ -104,9 +104,8 @@ export default function OurStory() {
                     fontSize={"md"}
                     color={"gray.700"}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. lorem
+                    Begain your journey by posting a job. We will help you to
+                    get the best talent.
                   </Text>
                 </Stack>
               </Flex>
@@ -127,9 +126,8 @@ export default function OurStory() {
                     fontSize={"md"}
                     color={"gray.700"}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. lorem
+                    Get your job done with the best talent in the market. We
+                    have the best teachers and advisors in the market right now.
                   </Text>
                 </Stack>
               </Flex>
