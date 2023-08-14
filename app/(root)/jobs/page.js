@@ -12,6 +12,7 @@ import {
   Grid,
   GridItem,
   Icon,
+  IconButton,
   Input,
   Radio,
   RadioGroup,
@@ -59,10 +60,18 @@ export default function Home() {
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <Flex
+                      justifyContent={"space-between"}
+                      alignItems={"center"}
+                      gap={4}
+                      mb={3}
+                    >
+                      <Input
+                        pb={1}
+                        placeholder="Search category..."
+                        focusBorderColor="green.500"
+                      />
+                    </Flex>
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -101,10 +110,22 @@ export default function Home() {
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <RadioGroup defaultValue="2">
+                      <Stack spacing={2} direction="column">
+                        <Radio colorScheme="green" value="1">
+                          Online
+                        </Radio>
+                        <Radio colorScheme="green" value="2">
+                          Ofline
+                        </Radio>
+                        <Radio colorScheme="green" value="3">
+                          Part Time
+                        </Radio>
+                        <Radio colorScheme="green" value="3">
+                          Full Time
+                        </Radio>
+                      </Stack>
+                    </RadioGroup>
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -146,13 +167,29 @@ export default function Home() {
             <Box p={8}>
               <Flex
                 justifyContent={"space-between"}
-                alignItems={"center"}
+                alignItems={"start"}
                 gap={4}
               >
-                <Input
-                  placeholder="Search here..."
-                  focusBorderColor="green.500"
-                />
+                <Stack direction={"column"} w={"full"} spacing={0}>
+                  <Input
+                    pb={1}
+                    placeholder="Search here..."
+                    focusBorderColor="green.500"
+                  />
+                  <Stack direction={"row"} px={4} spacing={4}>
+                    <Text color={"green.500"} cursor={"pointer"}>
+                      react
+                    </Text>
+                    <Text color={"green.500"} cursor={"pointer"}>
+                      Laravel dev
+                    </Text>
+
+                    <Text color={"green.500"} cursor={"pointer"}>
+                      figma to react
+                    </Text>
+                  </Stack>
+                </Stack>
+
                 <Button colorScheme={"green"} pb={1}>
                   <Icon as={MdSearch} boxSize={6} mt={1} />
                   <Text
@@ -217,11 +254,11 @@ export default function Home() {
                       View :
                     </Text>
                     <Box>
-                      <Button colorScheme={"green"} size={"sm"} mr={2}>
+                      <Button colorScheme={"green"} size={"sm"} mr={2} px={2}>
                         {" "}
                         <Icon as={MdOutlineReorder} boxSize={6} />
                       </Button>
-                      <Button size={"sm"}>
+                      <Button size={"sm"} px={2}>
                         {" "}
                         <Icon as={MdOutlineApps} boxSize={6} />
                       </Button>
@@ -235,6 +272,7 @@ export default function Home() {
                 base: "0",
                 md: "8",
               }}
+              pb={8}
             >
               <JobCard />
               <JobCard />

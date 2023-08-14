@@ -21,7 +21,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import {
+  MdContentCopy,
+  MdCopyAll,
   MdFavoriteBorder,
+  MdFileCopy,
   MdFlag,
   MdOutlineMyLocation,
   MdOutlinePayments,
@@ -414,9 +417,10 @@ function DetailsDrawer({
                       Job Link
                     </Text>
 
-                    <Box
+                    <Flex
                       bg={"blackAlpha.50"}
-                      p={2}
+                      py={2}
+                      px={3}
                       borderRadius={"md"}
                       border="1px"
                       borderColor="gray.100"
@@ -429,9 +433,15 @@ function DetailsDrawer({
                         border: "1px",
                         borderColor: "green.500",
                       }}
+                      justifyContent={"space-between"}
+                      alignItems={"center"}
+                      gap={2}
                     >
-                      https://chakra-ui.com/docs/components/grid/usage
-                    </Box>
+                      <Text>https://chakra-ui.com/docs</Text>
+                      <Box>
+                        <MdContentCopy />
+                      </Box>
+                    </Flex>
                   </Box>
                 </Box>
               </GridItem>
