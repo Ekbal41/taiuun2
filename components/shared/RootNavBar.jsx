@@ -100,6 +100,23 @@ export default function RootNavbar() {
                   Find Job
                 </Text>
               </Link>
+              <Link
+                href={"/profile"}
+              >
+                <Text
+                  cursor={"pointer"}
+                  py={"2"}
+                  px={"4"}
+                  rounded={"lg"}
+                  fontWeight={"semibold"}
+                  _hover={{
+                    bg: "gray.50",
+                  }}
+                  color={"gray.600"}
+                >
+                  Profile
+                </Text>
+              </Link>
 
               <Text
                 cursor={"pointer"}
