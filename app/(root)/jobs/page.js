@@ -1,5 +1,6 @@
 "use client";
 import JobCard from "@/components/card/JobCard";
+import { Search2Icon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -14,12 +15,19 @@ import {
   Icon,
   IconButton,
   Input,
+  InputGroup,
+  InputRightAddon,
   Radio,
   RadioGroup,
+  RangeSlider,
+  RangeSliderFilledTrack,
+  RangeSliderThumb,
+  RangeSliderTrack,
   Select,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import {
   MdOutlineApps,
   MdOutlineReorder,
@@ -28,6 +36,8 @@ import {
 } from "react-icons/md";
 
 export default function Home() {
+  const [salaryRange, setSalaryRange] = useState([0, 15000]);
+  const [gridCol, setGridCol] = useState(1);
   return (
     <>
       <Box
@@ -45,15 +55,20 @@ export default function Home() {
               lg: 4,
             }}
           >
-            <Box p={8}>
-              <Text fontSize={"2xl"} fontWeight={400}>
+            <Box px={8}>
+              <Text fontSize={"2xl"} fontWeight={"semibold"} mx={4} mt={0}>
                 Filter By
               </Text>
-              <Accordion defaultIndex={[0]} allowMultiple mt={8}>
+              <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple mt={8}>
                 <AccordionItem borderTop={"none"}>
                   <h2>
                     <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left">
+                      <Box
+                        as="span"
+                        flex="1"
+                        textAlign="left"
+                        fontWeight={"semibold"}
+                      >
                         Category
                       </Box>
                       <AccordionIcon />
@@ -78,7 +93,12 @@ export default function Home() {
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left">
+                      <Box
+                        as="span"
+                        flex="1"
+                        textAlign="left"
+                        fontWeight={"semibold"}
+                      >
                         Experience level
                       </Box>
                       <AccordionIcon />
@@ -89,12 +109,36 @@ export default function Home() {
                       <Stack spacing={2} direction="column">
                         <Radio colorScheme="green" value="1">
                           Beginner
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (234)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="2">
                           Intermediate
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (2454)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="3">
                           Highly Skilled
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (24)
+                          </Box>
                         </Radio>
                       </Stack>
                     </RadioGroup>
@@ -103,7 +147,82 @@ export default function Home() {
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left">
+                      <Box
+                        as="span"
+                        flex="1"
+                        textAlign="left"
+                        fontWeight={"semibold"}
+                      >
+                        Salary Range
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4} pt={12} px={10}>
+                    <RangeSlider
+                      aria-label={["min", "max"]}
+                      colorScheme="green"
+                      defaultValue={salaryRange}
+                      onChange={(value) => setSalaryRange(value)}
+                      min={1000}
+                      max={15000}
+                      step={500}
+                    >
+                      <RangeSliderTrack>
+                        <RangeSliderFilledTrack />
+                      </RangeSliderTrack>
+                      <RangeSliderThumb index={0} pos={"relative"}>
+                        <Box
+                          pos={"absolute"}
+                          border={"1px"}
+                          borderColor={"blackAlpha.300"}
+                          top="-40px"
+                          display={"flex"}
+                          justifyContent={"center"}
+                          alignItems={"center"}
+                          height={"30px"}
+                          minW={"30px"}
+                          fontSize={"sm"}
+                          rounded={"md"}
+                          px={2}
+                          color={"blackAlpha.700"}
+                          bg={"white"}
+                        >
+                          {salaryRange[0]}
+                        </Box>
+                      </RangeSliderThumb>
+                      <RangeSliderThumb index={1} pos={"relative"}>
+                        <Box
+                          pos={"absolute"}
+                          border={"1px"}
+                          borderColor={"blackAlpha.300"}
+                          top="-40px"
+                          display={"flex"}
+                          justifyContent={"center"}
+                          alignItems={"center"}
+                          height={"30px"}
+                          minW={"30px"}
+                          fontSize={"sm"}
+                          rounded={"md"}
+                          bg={"white"}
+                          px={2}
+                          color={"blackAlpha.700"}
+                        >
+                          {salaryRange[1]}
+                        </Box>
+                      </RangeSliderThumb>{" "}
+                    </RangeSlider>
+                  </AccordionPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box
+                        as="span"
+                        flex="1"
+                        textAlign="left"
+                        fontWeight={"semibold"}
+                      >
                         Job Type
                       </Box>
                       <AccordionIcon />
@@ -114,15 +233,47 @@ export default function Home() {
                       <Stack spacing={2} direction="column">
                         <Radio colorScheme="green" value="1">
                           Online
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (4075)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="2">
                           Ofline
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (4)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="3">
                           Part Time
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (104)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="3">
                           Full Time
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (84)
+                          </Box>
                         </Radio>
                       </Stack>
                     </RadioGroup>
@@ -132,7 +283,12 @@ export default function Home() {
                 <AccordionItem>
                   <h2>
                     <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left">
+                      <Box
+                        as="span"
+                        flex="1"
+                        textAlign="left"
+                        fontWeight={"semibold"}
+                      >
                         Number of applicants
                       </Box>
                       <AccordionIcon />
@@ -143,12 +299,36 @@ export default function Home() {
                       <Stack spacing={2} direction="column">
                         <Radio colorScheme="green" value="1">
                           Less than 5
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (245)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="2">
                           About 5 - 10
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (90)
+                          </Box>
                         </Radio>
                         <Radio colorScheme="green" value="3">
                           About 10 - 20
+                          <Box
+                            as="span"
+                            color={"gray.600"}
+                            fontSize={"13px"}
+                            ml={1}
+                          >
+                            (2004)
+                          </Box>
                         </Radio>
                       </Stack>
                     </RadioGroup>
@@ -171,35 +351,55 @@ export default function Home() {
                 gap={4}
               >
                 <Stack direction={"column"} w={"full"} spacing={0}>
-                  <Input
-                    pb={1}
-                    placeholder="Search here..."
-                    focusBorderColor="green.500"
-                  />
+                  <InputGroup size="md">
+                    <Input
+                      placeholder="Search here..."
+                      focusBorderColor="green.400"
+                      pb={1}
+                    />
+                    <InputRightAddon
+                      children="Search"
+                      pb={1}
+                      cursor={"pointer"}
+                    />
+                  </InputGroup>
+
                   <Stack direction={"row"} px={4} spacing={4}>
-                    <Text color={"green.500"} cursor={"pointer"}>
+                    <Text
+                      color={"green.500"}
+                      cursor={"pointer"}
+                      className="font-mirza"
+                    >
+                      {" "}
                       react
                     </Text>
-                    <Text color={"green.500"} cursor={"pointer"}>
+                    <Text
+                      color={"green.500"}
+                      cursor={"pointer"}
+                      className="font-mirza"
+                    >
                       Laravel dev
                     </Text>
 
-                    <Text color={"green.500"} cursor={"pointer"}>
+                    <Text
+                      color={"green.500"}
+                      cursor={"pointer"}
+                      className="font-mirza"
+                    >
                       figma to react
                     </Text>
                   </Stack>
                 </Stack>
 
                 <Button colorScheme={"green"} pb={1}>
-                  <Icon as={MdSearch} boxSize={6} mt={1} />
                   <Text
-                    ml={1}
                     display={{
                       base: "none",
                       md: "block",
                     }}
+                    px={2}
                   >
-                    Search{" "}
+                    Advance Search
                   </Text>
                 </Button>
               </Flex>
@@ -221,7 +421,7 @@ export default function Home() {
                     as={"span"}
                     fontWeight={"semibold"}
                     mr={1}
-                    color={"blackAlpha.800"}
+                    // color={"blackAlpha.700"}
                   >
                     234
                   </Box>{" "}
@@ -254,11 +454,22 @@ export default function Home() {
                       View :
                     </Text>
                     <Box>
-                      <Button colorScheme={"green"} size={"sm"} mr={2} px={2}>
+                      <Button
+                        colorScheme={`${gridCol === 1 ? "green" : "gray"}`}
+                        size={"sm"}
+                        mr={2}
+                        px={2}
+                        onClick={() => setGridCol(1)}
+                      >
                         {" "}
                         <Icon as={MdOutlineReorder} boxSize={6} />
                       </Button>
-                      <Button size={"sm"} px={2}>
+                      <Button
+                        size={"sm"}
+                        px={2}
+                        onClick={() => setGridCol(2)}
+                        colorScheme={`${gridCol === 2 ? "green" : "gray"}`}
+                      >
                         {" "}
                         <Icon as={MdOutlineApps} boxSize={6} />
                       </Button>
@@ -267,12 +478,16 @@ export default function Home() {
                 </Flex>
               </Flex>
             </Box>
-            <Box
+            <Grid
               px={{
                 base: "0",
                 md: "8",
               }}
               pb={8}
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: `repeat(${gridCol}, 1fr)`,
+              }}
             >
               <JobCard />
               <JobCard />
@@ -280,7 +495,7 @@ export default function Home() {
               <JobCard />
 
               <JobCard />
-            </Box>
+            </Grid>
           </GridItem>
         </Grid>
       </Box>
