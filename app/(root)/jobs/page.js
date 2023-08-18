@@ -32,7 +32,6 @@ import {
   MdOutlineApps,
   MdOutlineReorder,
   MdOutlineRssFeed,
-  MdSearch,
 } from "react-icons/md";
 
 export default function Home() {
@@ -160,7 +159,7 @@ export default function Home() {
                   </h2>
                   <AccordionPanel pb={4} pt={12} px={10}>
                     <RangeSlider
-                      aria-label={["min", "max"]}
+                      // aria-label={["min", "max"]}
                       colorScheme="green"
                       defaultValue={salaryRange}
                       onChange={(value) => setSalaryRange(value)}
@@ -210,7 +209,7 @@ export default function Home() {
                         >
                           {salaryRange[1]}
                         </Box>
-                      </RangeSliderThumb>{" "}
+                      </RangeSliderThumb>
                     </RangeSlider>
                   </AccordionPanel>
                 </AccordionItem>
@@ -357,11 +356,9 @@ export default function Home() {
                       focusBorderColor="green.400"
                       pb={1}
                     />
-                    <InputRightAddon
-                      children="Search"
-                      pb={1}
-                      cursor={"pointer"}
-                    />
+                    <InputRightAddon pb={1} cursor={"pointer"}>
+                      Search
+                    </InputRightAddon>
                   </InputGroup>
 
                   <Stack direction={"row"} px={4} spacing={4}>
@@ -370,7 +367,6 @@ export default function Home() {
                       cursor={"pointer"}
                       className="font-mirza"
                     >
-                      {" "}
                       react
                     </Text>
                     <Text
@@ -393,13 +389,14 @@ export default function Home() {
 
                 <Button
                   colorScheme={"green"}
+                  px={2}
                   pb={1}
                   display={{
                     base: "none",
                     md: "block",
                   }}
                 >
-                  <Text px={2}>Advance Search</Text>
+                  Advance Search
                 </Button>
               </Flex>
               <Flex
@@ -416,14 +413,9 @@ export default function Home() {
                     boxSize={6}
                     mr={2}
                   />
-                  <Box
-                    as={"span"}
-                    fontWeight={"semibold"}
-                    mr={1}
-                    // color={"blackAlpha.700"}
-                  >
+                  <Box as={"span"} fontWeight={"semibold"} mr={1}>
                     234
-                  </Box>{" "}
+                  </Box>
                   Jobs found
                 </Flex>
                 <Flex
@@ -434,11 +426,9 @@ export default function Home() {
                 >
                   <Flex justifyContent={"start"} alignItems={"center"} gap={4}>
                     <Text color={"blackAlpha.800"} fontWeight={"semibold"}>
-                      {" "}
                       Short :
                     </Text>
                     <Box>
-                      {" "}
                       <Select size={"sm"} focusBorderColor="green.500">
                         <option value="option1">Newest</option>
                         <option value="option2">Relevance</option>
@@ -449,7 +439,6 @@ export default function Home() {
                   </Flex>
                   <Flex justifyContent={"start"} alignItems={"center"} gap={4}>
                     <Text color={"blackAlpha.800"} fontWeight={"semibold"}>
-                      {" "}
                       View :
                     </Text>
                     <Box>
@@ -460,7 +449,6 @@ export default function Home() {
                         px={2}
                         onClick={() => setGridCol(1)}
                       >
-                        {" "}
                         <Icon as={MdOutlineReorder} boxSize={6} />
                       </Button>
                       <Button
@@ -469,7 +457,6 @@ export default function Home() {
                         onClick={() => setGridCol(2)}
                         colorScheme={`${gridCol === 2 ? "green" : "gray"}`}
                       >
-                        {" "}
                         <Icon as={MdOutlineApps} boxSize={6} />
                       </Button>
                     </Box>
