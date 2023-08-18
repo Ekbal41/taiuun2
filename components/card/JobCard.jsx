@@ -2,6 +2,7 @@ import {
   ArrowLeftIcon,
   AttachmentIcon,
   ExternalLinkIcon,
+  InfoIcon,
 } from "@chakra-ui/icons";
 import {
   Box,
@@ -17,17 +18,31 @@ import {
   Heading,
   Icon,
   Stack,
+  Tag,
   Text,
+  Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
+import { FaMoneyBill } from "react-icons/fa";
 import {
+  MdCalendarMonth,
   MdContentCopy,
   MdCopyAll,
   MdFavoriteBorder,
+  MdFemale,
   MdFileCopy,
   MdFlag,
+  MdMale,
+  MdOutlineAlarm,
+  MdOutlineAutoAwesome,
+  MdOutlineCalendarMonth,
+  MdOutlineCases,
+  MdOutlineHourglassTop,
+  MdOutlineInfo,
   MdOutlineMyLocation,
+  MdOutlinePayment,
   MdOutlinePayments,
+  MdOutlineQueryBuilder,
   MdOutlineThumbDownAlt,
   MdShare,
   MdStars,
@@ -89,62 +104,82 @@ export default function JobCard() {
           _hover={{
             transition: "all 0.2s",
             cursor: "pointer",
-            backgroundColor: "green.50",
+            backgroundColor: "blackAlpha.50",
             "& .heading": {
               color: "green.500",
             },
           }}
         >
           <Flex justifyContent={"space-between"} alignItems={"center"}>
-            {" "}
-            <Heading
-              size={"md"}
-              color={"green.500"}
+            <Text
               fontWeight={"semibold"}
+              fontSize={"lg"}
               maxW={{
                 base: "70%",
-                md: "80%",
+                md: "70%",
               }}
               _hover={{
                 color: "green.500",
                 textDecoration: "underline",
               }}
             >
-              Need a babysitter for two toddlers
-            </Heading>
+              Need a babysitter for two toddlers Lorem ipsum dolor sit amet.
+            </Text>
           </Flex>
           <Box>
-            In some layouts, you may need certain grid items to span specific
-            amount of columns or rows instead of an even distribution. To
-            achieve this, you need to pass the colSpan prop to the GridItem
-            component to span across columns and also pass the rowSpan component
-            to span across rows. You also need to specify the templateColumns
-            and templateRows. In some layouts, you may need certain grid items
-            to span specific amount of columns or rows instead of an even
-            distribution. To achieve this, you need to pass the colSpan prop to
-            the GridItem component to span across columns and also pass the
-            rowSpan component to span across rows. You also need to specify the
-            templateColumns and templateRows. In some layouts, you may need
-            certain grid items to span specific amount of columns or rows
-            instead of an even distribution. To achieve this, you need to pass
-            the colSpan prop to the GridItem component to span across columns
-            and also pass the rowSpan component to span across rows. You also
-            need to specify the templateColumns and templateRows.
+            <Stack
+              // direction={{ base: "column", md: "row" }}
+              spacing={2}
+            >
+              <Flex gap={2} alignItems={"center"}>
+                <Icon
+                  mt={"1px"}
+                  as={MdOutlineMyLocation}
+                  boxSize={4}
+                  color={"green.500"}
+                />
+                <Text>
+                  Dhaka, Badda
+                </Text>
+              </Flex>
+              <Flex gap={2} alignItems={"center"}>
+                <Icon
+                  as={MdOutlineAutoAwesome}
+                  boxSize={4}
+                  mt={1}
+                  color={"green.500"}
+                />
+                <Text>
+                  Highly Experienced
+                </Text>
+              </Flex>
+              <Flex gap={2} alignItems={"center"}>
+                <Icon
+                  as={MdFemale}
+                  boxSize={4}
+                  mt={1}
+                  color={"green.500"}
+                />
+                <Text>
+                  Female
+                </Text>
+              </Flex>
+              <Flex gap={2} alignItems={"center"}>
+                <Icon
+                  as={MdOutlinePayment}
+                  boxSize={4}
+                  mt={1}
+                  color={"green.500"}
+                />
+                <Text
+                  fontSize={"sm"}
+                  mt={"4px"}
+                >
+                  200k - 500k
+                </Text>
+              </Flex>
+            </Stack>
           </Box>
-          <Flex gap={4}>
-            <Flex gap={2} alignItems={"center"}>
-              <Icon as={MdOutlinePayments} boxSize={4} color={"green.500"} />
-              <Text>500k</Text>
-            </Flex>
-            <Flex gap={2} alignItems={"center"}>
-              <Icon
-                as={MdOutlineMyLocation}
-                boxSize={4}
-                color={"green.500"}
-              />
-              <Text>Dhaka, Badda</Text>
-            </Flex>
-          </Flex>
         </Stack>
       </Box>
 
@@ -208,7 +243,7 @@ function DetailsDrawer({
                     fontSize={"25px"}
                     fontWeight={"semibold"}
                   >
-                    Need a babysitter for 2 kids
+                    Need a babysitter for two toddlers
                   </Heading>
                 </Box>
                 <Box
@@ -221,21 +256,174 @@ function DetailsDrawer({
                   }}
                   borderColor={"gray.100"}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat. Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                  in culpa qui officia deserunt mollit anim id est laborum.
+                  <Text fontWeight={"semibold"} mb={2}>
+                    Job Description
+                  </Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco
+                  </Text>
+                </Box>
+                <Box
+                  px={8}
+                  py={4}
+                  borderLeft={"1px"}
+                  borderRight={{
+                    base: "1px",
+                    md: "none",
+                  }}
+                  borderColor={"gray.100"}
+                >
+                  <Text fontWeight={"semibold"} mb={2}>
+                    Skills Required{" "}
+                    <Box as="span" pt={2}>
+                      <Tooltip
+                        hasArrow
+                        label="Skills required for this job"
+                        bg="green.300"
+                        placement="top"
+                        color={"white"}
+                        py={2}
+                        px={4}
+                      >
+                        <InfoIcon color={"green.500"} />
+                      </Tooltip>
+                    </Box>
+                  </Text>
+                  <Flex
+                    mt={5}
+                    gap={4}
+                    flexWrap={"wrap"}
+                  >
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        Web design
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        html
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        css
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        web development
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        Web design
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        react
+                      </Text>
+                    </Flex>
+                    <Flex
+                      rounded={"full"}
+                      shadow={"xs"}
+                      height={"25px"}
+                      px={2}
+                      bg={"blackAlpha.100"}
+                      fontSize={"sm"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      cursor={"pointer"}
+                      textTransform={"capitalize"}
+                    >
+                      <Text
+                        color={"blackAlpha.800"}
+                      >
+                        Chakra ui
+                      </Text>
+                    </Flex>
+                  </Flex>
                 </Box>
                 <Grid
                   px={8}
@@ -245,6 +433,7 @@ function DetailsDrawer({
                   borderRight={"1px"}
                   borderColor={"gray.100"}
                   templateColumns="repeat(2, 1fr)"
+                  gap={6}
                 >
                   <GridItem>
                     <Flex
@@ -252,15 +441,17 @@ function DetailsDrawer({
                       gap={2}
                     >
                       <Icon
-                        as={MdStars}
+                        as={MdOutlineAutoAwesome}
                         boxSize={4}
                         color={"green.500"}
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>Intermediate</Text>
+                        <Text fontWeight={"semibold"}>
+                          Experience Level
+                        </Text>
                         <Text fontSize={"sm"} color={"gray.700"}>
-                          I am looking for a mix of experience and value
+                          Highly Experienced (5+ years)
                         </Text>
                       </Stack>
                     </Flex>
@@ -271,7 +462,7 @@ function DetailsDrawer({
                       gap={2}
                     >
                       <Icon
-                        as={MdOutlinePayments}
+                        as={MdOutlinePayment}
                         boxSize={4}
                         color={"green.500"}
                         mt={1}
@@ -287,35 +478,117 @@ function DetailsDrawer({
                       </Stack>
                     </Flex>
                   </GridItem>
+                  <GridItem>
+                    <Flex
+                      justifyContent={"start"}
+                      gap={2}
+                    >
+                      <Icon
+                        as={MdOutlineCalendarMonth}
+                        boxSize={4}
+                        color={"green.500"}
+                        mt={1}
+                      />
+                      <Stack spacing={0}>
+                        <Text fontWeight={"semibold"}>
+                          Joining Date
+                        </Text>
+                        <Text fontSize={"sm"} color={"gray.700"}>
+                          1st January, 2022
+                        </Text>
+                      </Stack>
+                    </Flex>
+                  </GridItem>
+                  <GridItem>
+                    <Flex
+                      justifyContent={"start"}
+                      gap={2}
+                    >
+                      <Icon
+                        as={MdOutlineAlarm}
+                        boxSize={4}
+                        color={"green.500"}
+                        mt={1}
+                      />
+                      <Stack spacing={0}>
+                        <Text fontWeight={"semibold"}>
+                          Office Time
+                        </Text>
+                        <Text
+                          fontSize={"sm"}
+                          color={"gray.700"}
+                        >
+                          9:00 AM - 5:00 PM
+                        </Text>
+                      </Stack>
+                    </Flex>
+                  </GridItem>
+                  <GridItem>
+                    <Flex
+                      justifyContent={"start"}
+                      gap={2}
+                    >
+                      <Icon
+                        as={MdFemale}
+                        boxSize={4}
+                        color={"green.500"}
+                        mt={1}
+                      />
+                      <Stack spacing={0}>
+                        <Text fontWeight={"semibold"}>
+                          Gender
+                        </Text>
+                        <Text
+                          fontSize={"sm"}
+                          color={"gray.700"}
+                        >
+                          Female
+                        </Text>
+                      </Stack>
+                    </Flex>
+                  </GridItem>
+                  <GridItem>
+                    <Flex
+                      justifyContent={"start"}
+                      gap={2}
+                    >
+                      <Icon
+                        as={MdOutlineMyLocation}
+                        boxSize={4}
+                        color={"green.500"}
+                        mt={1}
+                      />
+                      <Stack spacing={0}>
+                        <Text fontWeight={"semibold"}>
+                          Location
+                        </Text>
+                        <Text
+                          fontSize={"sm"}
+                          color={"gray.700"}
+                        >
+                          Mirpur 10, Block C, Darussalam Arcade (Level 6)
+                        </Text>
+                      </Stack>
+                    </Flex>
+                  </GridItem>
                 </Grid>
-                <Box
+
+                <Flex
                   px={8}
                   py={4}
                   borderLeft={"1px"}
                   borderRight={"1px"}
                   borderTop={"1px"}
                   borderColor={"gray.100"}
+                  gap={4}
                 >
-                  Search bar is nothing but the ChatGPT integrated with an
-                  internet search engine. It should be fast and quick to show
-                  the exact same picture on my website with size and other
-                  details. Meaning it should transform the fonds, size chart
-                  according to my website theme.
-                </Box>
-                <Box
-                  px={8}
-                  py={4}
-                  borderLeft={"1px"}
-                  borderRight={"1px"}
-                  borderTop={"1px"}
-                  borderColor={"gray.100"}
-                >
-                  Search bar is nothing but the ChatGPT integrated with an
-                  internet search engine. It should be fast and quick to show
-                  the exact same picture on my website with size and other
-                  details. Meaning it should transform the fonds, size chart
-                  according to my website theme.
-                </Box>
+                  <Text fontWeight={"semibold"} mb={2}>
+                    Job Type :
+                  </Text>
+                  <Text>
+                    Full Time
+                  </Text>
+                </Flex>
                 <Box
                   px={8}
                   py={4}
@@ -330,18 +603,59 @@ function DetailsDrawer({
                   </Text>
                   <Stack spacing={2}>
                     <Text>
-                      Aplications :{" "}
-                      <Box as={"span"} fontWeight={"semibold"}>10</Box>
+                      Aplications :
+                      <Box as="span" mx={2}>
+                        <Tooltip
+                          hasArrow
+                          label="Number of applications received for this job"
+                          bg="green.300"
+                          placement="top"
+                          color={"white"}
+                          py={2}
+                          px={4}
+                        >
+                          <InfoIcon color={"green.500"} />
+                        </Tooltip>
+                      </Box>
+                      <Box as={"span"} fontWeight={"semibold"}>
+                        Less than 10
+                      </Box>
                     </Text>
                     <Text>
-                      Last viewed by client:{" "}
+                      Last viewed by client:<Box as="span" mx={2}>
+                        <Tooltip
+                          hasArrow
+                          label="Number of applications received for this job"
+                          bg="green.300"
+                          placement="top"
+                          color={"white"}
+                          py={2}
+                          px={4}
+                        >
+                          <InfoIcon color={"green.500"} />
+                        </Tooltip>
+                      </Box>
                       <Box as={"span"} fontWeight={"semibold"}>
                         10 minutes ago
                       </Box>
                     </Text>
                     <Text>
-                      Interviewing:{" "}
-                      <Box as={"span"} fontWeight={"semibold"}>1</Box>
+                      Interviewing:<Box as="span" mx={2}>
+                        <Tooltip
+                          hasArrow
+                          label="Number of applications received for this job"
+                          bg="green.300"
+                          placement="top"
+                          color={"white"}
+                          py={2}
+                          px={4}
+                        >
+                          <InfoIcon color={"green.500"} />
+                        </Tooltip>
+                      </Box>
+                      <Box as={"span"} fontWeight={"semibold"}>
+                        1 person
+                      </Box>
                     </Text>
                   </Stack>
                 </Box>
@@ -399,17 +713,59 @@ function DetailsDrawer({
                         <Text
                           fontWeight={"semibold"}
                         >
-                          Dhaka
+                          Name
                         </Text>
-                        <Text>Mohakhali</Text>
+                        <Text
+                          fontSize={"sm"}
+                          color={"gray.700"}
+                        >
+                          John Doe
+                        </Text>
                       </Flex>
+                      <Flex alignItems={"start"} direction={"column"}>
+                        <Text
+                          fontWeight={"semibold"}
+                        >
+                          Institute
+                        </Text>
+                        <Text fontSize={"sm"} color={"gray.700"}>
+                          Britaniya International School
+                        </Text>
+                      </Flex>
+                      <Flex alignItems={"start"} direction={"column"}>
+                        <Text
+                          fontWeight={"semibold"}
+                        >
+                          Gender
+                        </Text>
+                        <Text fontSize={"sm"} color={"gray.700"}>
+                          Female
+                        </Text>
+                      </Flex>
+                    </Stack>
+                  </Box>
+                  <Box
+                    px={8}
+                    pt={4}
+                    pb={8}
+                    borderBottom={"1px"}
+                    borderColor={"gray.100"}
+                  >
+                    <Stack>
                       <Text fontWeight={"semibold"}>1 Posted Job</Text>
-                      <Text>
-                        Member Since: 1 month ago
+                      <Text
+                        fontSize={"sm"}
+                        color={"gray.700"}
+                      >
+                        Member Since : Jan 2021
                       </Text>
                     </Stack>
                   </Box>
-                  <Box px={8} pt={4} pb={8}>
+                  <Box
+                    px={8}
+                    pt={4}
+                    pb={8}
+                  >
                     <Text
                       fontWeight={"semibold"}
                       mb={4}

@@ -391,16 +391,15 @@ export default function Home() {
                   </Stack>
                 </Stack>
 
-                <Button colorScheme={"green"} pb={1}>
-                  <Text
-                    display={{
-                      base: "none",
-                      md: "block",
-                    }}
-                    px={2}
-                  >
-                    Advance Search
-                  </Text>
+                <Button
+                  colorScheme={"green"}
+                  pb={1}
+                  display={{
+                    base: "none",
+                    md: "block",
+                  }}
+                >
+                  <Text px={2}>Advance Search</Text>
                 </Button>
               </Flex>
               <Flex
