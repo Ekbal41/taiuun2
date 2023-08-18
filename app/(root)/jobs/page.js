@@ -344,60 +344,60 @@ export default function Home() {
             shadow={"xs"}
           >
             <Box p={8}>
-              <Flex
-                justifyContent={"space-between"}
-                alignItems={"start"}
-                gap={4}
-              >
-                <Stack direction={"column"} w={"full"} spacing={0}>
-                  <InputGroup size="md">
-                    <Input
-                      placeholder="Search here..."
-                      focusBorderColor="green.400"
-                      pb={1}
-                    />
-                    <InputRightAddon pb={1} cursor={"pointer"}>
-                      Search
-                    </InputRightAddon>
-                  </InputGroup>
+              <Flex justifyContent={"start"} alignItems={"start"} gap={4}>
+                <Box w={"full"}>
+                  <Stack direction={"column"} w={"full"} spacing={0}>
+                    <InputGroup size="md">
+                      <Input
+                        placeholder="Search here..."
+                        focusBorderColor="green.400"
+                        pb={1}
+                      />
+                      <InputRightAddon pb={1} cursor={"pointer"}>
+                        Search
+                      </InputRightAddon>
+                    </InputGroup>
 
-                  <Stack direction={"row"} px={4} spacing={4}>
-                    <Text
-                      color={"green.500"}
-                      cursor={"pointer"}
-                      className="font-mirza"
-                    >
-                      react
-                    </Text>
-                    <Text
-                      color={"green.500"}
-                      cursor={"pointer"}
-                      className="font-mirza"
-                    >
-                      Laravel dev
-                    </Text>
+                    <Stack direction={"row"} px={4} spacing={4}>
+                      <Text
+                        color={"green.500"}
+                        cursor={"pointer"}
+                        className="font-mirza"
+                      >
+                        react
+                      </Text>
+                      <Text
+                        color={"green.500"}
+                        cursor={"pointer"}
+                        className="font-mirza"
+                      >
+                        Laravel dev
+                      </Text>
 
-                    <Text
-                      color={"green.500"}
-                      cursor={"pointer"}
-                      className="font-mirza"
-                    >
-                      figma to react
-                    </Text>
+                      <Text
+                        color={"green.500"}
+                        cursor={"pointer"}
+                        className="font-mirza"
+                      >
+                        figma to react
+                      </Text>
+                    </Stack>
                   </Stack>
-                </Stack>
+                </Box>
 
-                <Button
-                  colorScheme={"green"}
-                  px={2}
-                  pb={1}
-                  display={{
-                    base: "none",
-                    md: "block",
-                  }}
-                >
-                  Advance Search
-                </Button>
+                <Box>
+                  <Button
+                    width={"fit-content"}
+                    colorScheme={"green"}
+                    pb={1}
+                    display={{
+                      base: "none",
+                      md: "block",
+                    }}
+                  >
+                    Advanced Searce
+                  </Button>
+                </Box>
               </Flex>
               <Flex
                 justifyContent={"space-between"}
