@@ -1,9 +1,4 @@
-import {
-  ArrowLeftIcon,
-  AttachmentIcon,
-  ExternalLinkIcon,
-  InfoIcon,
-} from "@chakra-ui/icons";
+import { ArrowLeftIcon, ExternalLinkIcon, InfoIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -18,34 +13,21 @@ import {
   Heading,
   Icon,
   Stack,
-  Tag,
   Text,
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FaMoneyBill } from "react-icons/fa";
 import {
-  MdCalendarMonth,
   MdContentCopy,
-  MdCopyAll,
   MdFavoriteBorder,
   MdFemale,
-  MdFileCopy,
   MdFlag,
-  MdMale,
   MdOutlineAlarm,
   MdOutlineAutoAwesome,
   MdOutlineCalendarMonth,
-  MdOutlineCases,
-  MdOutlineHourglassTop,
-  MdOutlineInfo,
   MdOutlineMyLocation,
   MdOutlinePayment,
-  MdOutlinePayments,
-  MdOutlineQueryBuilder,
   MdOutlineThumbDownAlt,
-  MdShare,
-  MdStars,
 } from "react-icons/md";
 
 export default function JobCard() {
@@ -128,7 +110,6 @@ export default function JobCard() {
           </Flex>
           <Box>
             <Stack
-              // direction={{ base: "column", md: "row" }}
               spacing={2}
             >
               <Flex gap={2} alignItems={"center"}>
