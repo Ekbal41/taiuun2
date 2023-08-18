@@ -75,11 +75,12 @@ export default function Navbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
                   color={"gray.600"}
+                  fontSize={"16px"}
                 >
                   Dashboard
                 </Text>
@@ -90,14 +91,15 @@ export default function Navbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
+                  fontSize={"16px"}
                 >
                   My Business <Icon as={ChevronDownIcon} fontSize={20} />
                 </MenuButton>
-                <MenuList>
+                <MenuList fontSize={"16px"}>
                   {/* MenuItems are not rendered unless Menu is open */}
                   <MenuItem>New Window</MenuItem>
                   <MenuItem>Open Closed Tab</MenuItem>
@@ -110,14 +112,15 @@ export default function Navbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
+                  fontSize={"16px"}
                 >
                   Cources <Icon as={ChevronDownIcon} fontSize={20} />
                 </MenuButton>
-                <MenuList>
+                <MenuList fontSize={"16px"}>
                   {/* MenuItems are not rendered unless Menu is open */}
                   <MenuItem>New Window</MenuItem>
                   <MenuItem>Open Closed Tab</MenuItem>
@@ -130,14 +133,15 @@ export default function Navbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
+                  fontSize={"16px"}
                 >
                   Others <Icon as={ChevronDownIcon} fontSize={20} />
                 </MenuButton>
-                <MenuList>
+                <MenuList fontSize={"16px"}>
                   {/* MenuItems are not rendered unless Menu is open */}
                   <MenuItem>New Window</MenuItem>
                   <MenuItem>Open Closed Tab</MenuItem>
@@ -185,10 +189,10 @@ export default function Navbar() {
                     <Box
                       lineHeight={"1.2"}
                     >
-                      <Text mb={"0"} fontWeight={"semibold"}>
+                      <Text mb={"0"} fontWeight={"500"}>
                         Asif Ekbal
                       </Text>
-                      <Text color={"gray.600"}>
+                      <Text color={"blackAlpha.700"}>
                         asifekbal@gmail.com
                       </Text>
                     </Box>
@@ -199,8 +203,9 @@ export default function Navbar() {
                     size={"lg"}
                     border={"1px"}
                     bg={"white"}
-                    pb={"1"}
                     h={"37px"}
+                    color={"blackAlpha.800"}
+                    fontSize={"16px"}
                     borderRadius={"sm"}
                     _hover={{
                       bg: "gray.700",
@@ -211,7 +216,7 @@ export default function Navbar() {
                   </Button>
                 </Box>
                 <Box
-                  fontSize={"17px"}
+                  fontSize={"16px"}
                 >
                   <MenuDivider />
                   <MenuItem>Profile</MenuItem>

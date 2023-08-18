@@ -91,11 +91,12 @@ export default function RootNavbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
                   color={"gray.600"}
+                  fontSize={"16px"}
                 >
                   Find Job
                 </Text>
@@ -108,11 +109,12 @@ export default function RootNavbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
                   color={"gray.600"}
+                  fontSize={"16px"}
                 >
                   Profile
                 </Text>
@@ -123,11 +125,12 @@ export default function RootNavbar() {
                 py={"2"}
                 px={"4"}
                 rounded={"lg"}
-                fontWeight={"semibold"}
+                fontWeight={"500"}
                 _hover={{
                   bg: "gray.50",
                 }}
                 color={"gray.600"}
+                fontSize={"16px"}
               >
                 Become a Seller
               </Text>
@@ -137,7 +140,8 @@ export default function RootNavbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
+                  fontSize={"16px"}
                   _hover={{
                     bg: "gray.50",
                   }}
@@ -146,8 +150,9 @@ export default function RootNavbar() {
                 </MenuButton>
                 <MenuList>
                   {/* MenuItems are not rendered unless Menu is open */}
-                  <MenuItem>
-                    <Icon
+                  <MenuItem
+                    fontSize={"16px"}
+                  >                    <Icon
                       as={MdDevices}
                       boxSize={5}
                       mr={2}
@@ -155,12 +160,14 @@ export default function RootNavbar() {
                     />
                     Web Development
                   </MenuItem>
-                  <MenuItem>
-                    <Icon as={MdRoute} boxSize={5} mr={2} color={"red.500"} />
+                  <MenuItem
+                    fontSize={"16px"}
+                  >                    <Icon as={MdRoute} boxSize={5} mr={2} color={"red.500"} />
                     UI/UX Design
                   </MenuItem>
-                  <MenuItem>
-                    <Icon
+                  <MenuItem
+                    fontSize={"16px"}
+                  >                    <Icon
                       as={MdSupportAgent}
                       boxSize={5}
                       mr={2}
@@ -168,8 +175,9 @@ export default function RootNavbar() {
                     />
                     Digital Marketing
                   </MenuItem>
-                  <MenuItem>
-                    <Icon
+                  <MenuItem
+                    fontSize={"16px"}
+                  >                    <Icon
                       as={SunIcon}
                       boxSize={5}
                       mr={2}
@@ -177,8 +185,9 @@ export default function RootNavbar() {
                     />
                     Data Science
                   </MenuItem>
-                  <MenuItem>
-                    <Icon
+                  <MenuItem
+                    fontSize={"16px"}
+                  >                    <Icon
                       as={MdOutlineTabletAndroid}
                       boxSize={5}
                       mr={2}
@@ -186,7 +195,9 @@ export default function RootNavbar() {
                     />
                     Mobile Development
                   </MenuItem>
-                  <MenuItem>
+                  <MenuItem
+                    fontSize={"16px"}
+                  >
                     <Icon
                       as={MdPhotoCamera}
                       boxSize={5}
@@ -202,11 +213,12 @@ export default function RootNavbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
                   color={"gray.600"}
+                  fontSize={"16px"}
                 >
                   Dashboard
                 </Text>
@@ -217,11 +229,12 @@ export default function RootNavbar() {
                   py={"2"}
                   px={"4"}
                   rounded={"lg"}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                   _hover={{
                     bg: "gray.50",
                   }}
                   color={"gray.600"}
+                  fontSize={"16px"}
                 >
                   Sign In
                 </Text>
@@ -231,6 +244,7 @@ export default function RootNavbar() {
                   ml={4}
                   textTransform={"uppercase"}
                   colorScheme="green"
+                  fontSize={"16px"}
                 >
                   Join
                 </Button>

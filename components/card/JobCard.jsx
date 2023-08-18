@@ -94,7 +94,7 @@ export default function JobCard() {
         >
           <Flex justifyContent={"space-between"} alignItems={"center"}>
             <Text
-              fontWeight={"semibold"}
+              fontWeight={"500"}
               fontSize={"lg"}
               maxW={{
                 base: "70%",
@@ -105,7 +105,7 @@ export default function JobCard() {
                 textDecoration: "underline",
               }}
             >
-              Need a babysitter for two toddlers Lorem ipsum dolor sit amet.
+              🚀 Need a babysitter for two toddlers
             </Text>
           </Flex>
           <Box>
@@ -194,7 +194,7 @@ function DetailsDrawer({
                 <Icon as={ExternalLinkIcon} boxSize={4} mt={1} />
                 <Text
                   cursor={"pointer"}
-                  fontWeight={"semibold"}
+                  fontWeight={"600"}
                   fontSize={"md"}
                 >
                   Open in a new window
@@ -221,10 +221,10 @@ function DetailsDrawer({
                   borderColor={"gray.100"}
                 >
                   <Heading
-                    fontSize={"25px"}
-                    fontWeight={"semibold"}
+                    fontSize={"xl"}
+                    fontWeight={"500"}
                   >
-                    Need a babysitter for two toddlers
+                   🚀 Need a babysitter for two toddlers
                   </Heading>
                 </Box>
                 <Box
@@ -237,14 +237,17 @@ function DetailsDrawer({
                   }}
                   borderColor={"gray.100"}
                 >
-                  <Text fontWeight={"semibold"} mb={2}>
+                  <Text fontWeight={"600"} mb={2}>
                     Job Description
                   </Text>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco
+                  <Text
+                    fontSize={"sm"}
+                  >
+                    No one shall be subjected to arbitrary arrest, detention or
+                    exile. Everyone is entitled in full equality to a fair and
+                    public hearing by an independent and impartial tribunal, in
+                    the determination of his rights and obligations and of any
+                    criminal charge against him.
                   </Text>
                 </Box>
                 <Box
@@ -257,7 +260,7 @@ function DetailsDrawer({
                   }}
                   borderColor={"gray.100"}
                 >
-                  <Text fontWeight={"semibold"} mb={2}>
+                  <Text fontWeight={"600"} mb={2}>
                     Skills Required{" "}
                     <Box as="span" pt={2}>
                       <Tooltip
@@ -428,7 +431,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>
+                        <Text fontWeight={"600"}>
                           Experience Level
                         </Text>
                         <Text fontSize={"sm"} color={"gray.700"}>
@@ -449,7 +452,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>Salary</Text>
+                        <Text fontWeight={"600"}>Salary</Text>
                         <Text
                           fontSize={"sm"}
                           color={"gray.700"}
@@ -471,7 +474,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>
+                        <Text fontWeight={"600"}>
                           Joining Date
                         </Text>
                         <Text fontSize={"sm"} color={"gray.700"}>
@@ -492,7 +495,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>
+                        <Text fontWeight={"600"}>
                           Office Time
                         </Text>
                         <Text
@@ -516,7 +519,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>
+                        <Text fontWeight={"600"}>
                           Gender
                         </Text>
                         <Text
@@ -540,7 +543,7 @@ function DetailsDrawer({
                         mt={1}
                       />
                       <Stack spacing={0}>
-                        <Text fontWeight={"semibold"}>
+                        <Text fontWeight={"600"}>
                           Location
                         </Text>
                         <Text
@@ -563,7 +566,7 @@ function DetailsDrawer({
                   borderColor={"gray.100"}
                   gap={4}
                 >
-                  <Text fontWeight={"semibold"} mb={2}>
+                  <Text fontWeight={"600"} mb={2}>
                     Job Type :
                   </Text>
                   <Text>
@@ -577,12 +580,14 @@ function DetailsDrawer({
                   borderColor={"gray.100"}
                 >
                   <Text
-                    fontWeight={"semibold"}
+                    fontWeight={"600"}
                     mb={4}
                   >
                     Activity on this job
                   </Text>
-                  <Stack spacing={2}>
+                  <Stack spacing={2}
+                  fontSize={"sm"}
+                  >
                     <Text>
                       Aplications :
                       <Box as="span" mx={2}>
@@ -598,7 +603,7 @@ function DetailsDrawer({
                           <InfoIcon color={"green.500"} />
                         </Tooltip>
                       </Box>
-                      <Box as={"span"} fontWeight={"semibold"}>
+                      <Box as={"span"} fontWeight={"600"}>
                         Less than 10
                       </Box>
                     </Text>
@@ -616,7 +621,7 @@ function DetailsDrawer({
                           <InfoIcon color={"green.500"} />
                         </Tooltip>
                       </Box>
-                      <Box as={"span"} fontWeight={"semibold"}>
+                      <Box as={"span"} fontWeight={"600"}>
                         10 minutes ago
                       </Box>
                     </Text>
@@ -634,7 +639,7 @@ function DetailsDrawer({
                           <InfoIcon color={"green.500"} />
                         </Tooltip>
                       </Box>
-                      <Box as={"span"} fontWeight={"semibold"}>
+                      <Box as={"span"} fontWeight={"600"}>
                         1 person
                       </Box>
                     </Text>
@@ -683,7 +688,7 @@ function DetailsDrawer({
                     borderColor={"gray.100"}
                   >
                     <Text
-                      fontWeight={"semibold"}
+                      fontWeight={"600"}
                       mb={4}
                     >
                       About The Employer
@@ -692,7 +697,7 @@ function DetailsDrawer({
                     <Stack spacing={2}>
                       <Flex alignItems={"start"} direction={"column"}>
                         <Text
-                          fontWeight={"semibold"}
+                          fontWeight={"600"}
                         >
                           Name
                         </Text>
@@ -705,7 +710,7 @@ function DetailsDrawer({
                       </Flex>
                       <Flex alignItems={"start"} direction={"column"}>
                         <Text
-                          fontWeight={"semibold"}
+                          fontWeight={"600"}
                         >
                           Institute
                         </Text>
@@ -715,7 +720,7 @@ function DetailsDrawer({
                       </Flex>
                       <Flex alignItems={"start"} direction={"column"}>
                         <Text
-                          fontWeight={"semibold"}
+                          fontWeight={"600"}
                         >
                           Gender
                         </Text>
@@ -733,7 +738,7 @@ function DetailsDrawer({
                     borderColor={"gray.100"}
                   >
                     <Stack>
-                      <Text fontWeight={"semibold"}>1 Posted Job</Text>
+                      <Text fontWeight={"600"}>1 Posted Job</Text>
                       <Text
                         fontSize={"sm"}
                         color={"gray.700"}
@@ -748,7 +753,7 @@ function DetailsDrawer({
                     pb={8}
                   >
                     <Text
-                      fontWeight={"semibold"}
+                      fontWeight={"600"}
                       mb={4}
                     >
                       Job Link

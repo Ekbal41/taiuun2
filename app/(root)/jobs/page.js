@@ -55,7 +55,7 @@ export default function Home() {
             }}
           >
             <Box px={8}>
-              <Text fontSize={"2xl"} fontWeight={"semibold"} mx={4} mt={0}>
+              <Text fontSize={"2xl"} fontWeight={"400"} mx={4} mt={0}>
                 Filter By
               </Text>
               <Accordion defaultIndex={[0, 1, 2, 3, 4]} allowMultiple mt={8}>
@@ -66,7 +66,7 @@ export default function Home() {
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontWeight={"semibold"}
+                        fontWeight={"500"}
                       >
                         Category
                       </Box>
@@ -81,7 +81,6 @@ export default function Home() {
                       mb={3}
                     >
                       <Input
-                        pb={1}
                         placeholder="Search category..."
                         focusBorderColor="green.500"
                       />
@@ -96,7 +95,7 @@ export default function Home() {
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontWeight={"semibold"}
+                        fontWeight={"500"}
                       >
                         Experience level
                       </Box>
@@ -105,7 +104,11 @@ export default function Home() {
                   </h2>
                   <AccordionPanel pb={4}>
                     <RadioGroup defaultValue="2">
-                      <Stack spacing={2} direction="column">
+                      <Stack
+                        spacing={2}
+                        direction="column"
+                        color={"blackAlpha.800"}
+                      >
                         <Radio colorScheme="green" value="1">
                           Beginner
                           <Box
@@ -150,7 +153,7 @@ export default function Home() {
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontWeight={"semibold"}
+                        fontWeight={"500"}
                       >
                         Salary Range
                       </Box>
@@ -220,7 +223,7 @@ export default function Home() {
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontWeight={"semibold"}
+                        fontWeight={"500"}
                       >
                         Job Type
                       </Box>
@@ -229,7 +232,11 @@ export default function Home() {
                   </h2>
                   <AccordionPanel pb={4}>
                     <RadioGroup defaultValue="2">
-                      <Stack spacing={2} direction="column">
+                      <Stack
+                        spacing={2}
+                        direction="column"
+                        color={"blackAlpha.800"}
+                      >
                         <Radio colorScheme="green" value="1">
                           Online
                           <Box
@@ -263,7 +270,7 @@ export default function Home() {
                             (104)
                           </Box>
                         </Radio>
-                        <Radio colorScheme="green" value="3">
+                        <Radio colorScheme="green" value="4">
                           Full Time
                           <Box
                             as="span"
@@ -286,7 +293,7 @@ export default function Home() {
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontWeight={"semibold"}
+                        fontWeight={"500"}
                       >
                         Number of applicants
                       </Box>
@@ -295,7 +302,11 @@ export default function Home() {
                   </h2>
                   <AccordionPanel pb={4}>
                     <RadioGroup defaultValue="2">
-                      <Stack spacing={2} direction="column">
+                      <Stack
+                        spacing={2}
+                        direction="column"
+                        color={"blackAlpha.800"}
+                      >
                         <Radio colorScheme="green" value="1">
                           Less than 5
                           <Box
@@ -351,7 +362,6 @@ export default function Home() {
                       <Input
                         placeholder="Search here..."
                         focusBorderColor="green.400"
-                        pb={1}
                       />
                       <InputRightAddon pb={1} cursor={"pointer"}>
                         Search
@@ -362,14 +372,12 @@ export default function Home() {
                       <Text
                         color={"green.500"}
                         cursor={"pointer"}
-                        className="font-mirza"
                       >
                         react
                       </Text>
                       <Text
                         color={"green.500"}
                         cursor={"pointer"}
-                        className="font-mirza"
                       >
                         Laravel dev
                       </Text>
@@ -377,7 +385,6 @@ export default function Home() {
                       <Text
                         color={"green.500"}
                         cursor={"pointer"}
-                        className="font-mirza"
                       >
                         figma to react
                       </Text>
@@ -389,7 +396,6 @@ export default function Home() {
                   <Button
                     width={"fit-content"}
                     colorScheme={"green"}
-                    pb={1}
                     display={{
                       base: "none",
                       md: "block",
@@ -413,8 +419,8 @@ export default function Home() {
                     boxSize={6}
                     mr={2}
                   />
-                  <Box as={"span"} fontWeight={"semibold"} mr={1}>
-                    234
+                  <Box as={"span"} fontWeight={"500"} mr={1}>
+                    4,567
                   </Box>
                   Jobs found
                 </Flex>
@@ -425,7 +431,7 @@ export default function Home() {
                   direction={["column", "row"]}
                 >
                   <Flex justifyContent={"start"} alignItems={"center"} gap={4}>
-                    <Text color={"blackAlpha.800"} fontWeight={"semibold"}>
+                    <Text color={"blackAlpha.800"} fontWeight={"500"}>
                       Short :
                     </Text>
                     <Box>
@@ -438,7 +444,7 @@ export default function Home() {
                     </Box>
                   </Flex>
                   <Flex justifyContent={"start"} alignItems={"center"} gap={4}>
-                    <Text color={"blackAlpha.800"} fontWeight={"semibold"}>
+                    <Text color={"blackAlpha.800"} fontWeight={"500"}>
                       View :
                     </Text>
                     <Box>

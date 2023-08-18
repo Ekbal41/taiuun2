@@ -57,9 +57,13 @@ export default function Home() {
                       src="https://bit.ly/ryan-florence"
                     />{" "}
                     <Flex direction={"column"} gap={2}>
-                      <Heading size={"md"} color={"gray.600"} mt={2}>
+                      <Text
+                        fontSize={"xl"}
+                        color={"blackAlpha.800"}
+                        fontWeight={"600"}
+                      >
                         Ryan Florence
-                      </Heading>
+                      </Text>
                       <Flex gap={2}>
                         <Icon as={StarIcon} color={"yellow.400"} />
                         <Icon as={StarIcon} color={"yellow.400"} />
@@ -73,10 +77,15 @@ export default function Home() {
                   <Icon as={EditIcon} color={"green.500"} boxSize={6} />
                 </Flex>
 
-                <Stack mt={4} spacing={1} fontSize={"sm"} color={"gray.600"}>
+                <Stack
+                  mt={4}
+                  spacing={1}
+                  fontSize={"sm"}
+                  color={"blackAlpha.800"}
+                >
                   <Flex gap={2} alignItems={"center"}>
                     <Icon as={MdOutlineMyLocation} boxSize={4} />
-                    <Text>New York City, NY</Text>
+                    <Text>Dhaka, Bangladesh</Text>
                   </Flex>
                   <Flex gap={2} alignItems={"center"}>
                     <Icon as={MdMailOutline} boxSize={4} />
@@ -97,10 +106,9 @@ export default function Home() {
                     Detailed Profile
                   </Button>{" "}
                   <Button
-                    colorScheme="gray"
+                    colorScheme="blackAlpha"
                     w={"50%"}
                     variant={"outline"}
-                    color={"gray.500"}
                   >
                     See Public View
                   </Button>
@@ -114,27 +122,18 @@ export default function Home() {
               >
                 <Heading
                   size={"md"}
-                  color={"gray.600"}
+                  color={"blackAlpha.800"}
                   mb={2}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                 >
                   About Me
                 </Heading>
-                In some layouts, you may need certain grid items to span
-                specific amount of columns or rows instead of an even
-                distribution. To achieve this, you need to pass the colSpan prop
-                to the GridItem component to span across columns and also pass
-                the rowSpan component to span across rows. You also need to
-                specify the templateColumns and templateRows. In some layouts,
-                you may need certain grid items to span specific amount of
-                columns or rows instead of an even distribution. To achieve
-                this, you need to pass the colSpan prop to the GridItem
-                component to span across columns and also pass the rowSpan
-                component to span across rows. You also need to specify the
-                templateColumns and templateRows. In some layouts, you may need
-                certain grid items to span specific amount of columns or rows
-                instead of an even distribution. To achieve this, you need to
-                pass
+                I am a Web Developer with almost two years of experience working
+                in the field of Web Development. I am currently working as a
+                freelancer for various companies ranging from small to big
+                businesses. I have worked on projects involving the development
+                and implementation of websites for non-profit organizations as
+                well as public schools.
               </Box>
               <Box
                 bg="white"
@@ -147,9 +146,9 @@ export default function Home() {
               >
                 <Heading
                   size={"md"}
-                  color={"gray.600"}
+                  color={"blackAlpha.800"}
                   mb={2}
-                  fontWeight={"semibold"}
+                  fontWeight={"500"}
                 >
                   Employment History
                 </Heading>
@@ -163,11 +162,11 @@ export default function Home() {
                         />
                         <Flex direction={"column"} gap={2} alignItems={"start"}>
                           <Text
-                            color={"gray.600"}
-                            fontWeight={"semibold"}
+                            color={"green.500"}
+                            fontWeight={"500"}
                             fontSize={"lg"}
                           >
-                            Ryan Florence
+                            Mugdha Rahman
                           </Text>
                           <Flex gap={2}>
                             <Icon as={StarIcon} color={"yellow.400"} />
@@ -176,17 +175,14 @@ export default function Home() {
                             <Icon as={StarIcon} color={"yellow.400"} />
                             <Icon as={StarIcon} color={"gray"} />
                           </Flex>{" "}
-                          <Text
-                            color={"green.400"}
-                            fontFamily={"monospace"}
-                            fontSize={"md"}
-                          >
-                            Says:
-                          </Text>
                         </Flex>
                       </Flex>
 
-                      <Flex direction={"column"} alignItems={"end"}>
+                      <Flex
+                        direction={"column"}
+                        alignItems={"end"}
+                        fontSize={"sm"}
+                      >
                         <Flex gap={2} alignItems={"center"}>
                           <Text>Jan 2020 - Dec 202</Text>
                           <Icon
@@ -213,7 +209,7 @@ export default function Home() {
                         </Flex>
                       </Flex>
                     </Flex>
-                    <Text ps={16}>
+                    <Text ps={16} fontSize={"sm"} mt={2}>
                       To achieve this, you need to pass the colSpan prop to the
                       GridItem component to span across columns and also pass.
                     </Text>
@@ -227,11 +223,11 @@ export default function Home() {
                         />
                         <Flex direction={"column"} gap={2} alignItems={"start"}>
                           <Text
-                            color={"gray.600"}
-                            fontWeight={"semibold"}
+                            color={"green.500"}
+                            fontWeight={"500"}
                             fontSize={"lg"}
                           >
-                            Ryan Florence
+                            Aniket Roy
                           </Text>
                           <Flex gap={2}>
                             <Icon as={StarIcon} color={"yellow.400"} />
@@ -240,17 +236,14 @@ export default function Home() {
                             <Icon as={StarIcon} color={"yellow.400"} />
                             <Icon as={StarIcon} color={"gray"} />
                           </Flex>{" "}
-                          <Text
-                            color={"green.400"}
-                            fontFamily={"monospace"}
-                            fontSize={"md"}
-                          >
-                            Says:
-                          </Text>
                         </Flex>
                       </Flex>
 
-                      <Flex direction={"column"} alignItems={"end"}>
+                      <Flex
+                        direction={"column"}
+                        alignItems={"end"}
+                        fontSize={"sm"}
+                      >
                         <Flex gap={2} alignItems={"center"}>
                           <Text>Jan 2020 - Dec 202</Text>
                           <Icon
@@ -277,7 +270,7 @@ export default function Home() {
                         </Flex>
                       </Flex>
                     </Flex>
-                    <Text ps={16}>
+                    <Text ps={16} fontSize={"sm"} mt={2}>
                       To achieve this, you need to pass the colSpan prop to the
                       GridItem component to span across columns and also pass
                       the rowSpan component to span across rows. You also need
@@ -304,19 +297,21 @@ export default function Home() {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Heading
-                  size={"md"}
-                  color={"blackAlpha.700"}
-                  fontWeight={"semibold"}
+                <Text
+                  fontSize={"lg"}
+                  color={"blackAlpha.800"}
+                  fontWeight={"500"}
                 >
                   <Icon as={BellIcon} mb={1} mr={2} color={"green.500"} />
                   Jobs In Your Area
                   <Box as="span" ml={2} color={"green.400"} fontSize={"lg"}>
                     (9)
                   </Box>
-                </Heading>
-                <Select placeholder="Filter By" w={"38"}
-                focusBorderColor="green.500"
+                </Text>
+                <Select
+                  placeholder="Filter By"
+                  w={"38"}
+                  focusBorderColor="green.500"
                 >
                   <option value="option1">All</option>
                   <option value="option1">Male</option>
