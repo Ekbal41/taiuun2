@@ -324,21 +324,6 @@ export default function Home() {
               <JobCard />
               <JobCard />
               <JobCard />
-              <Flex
-                p={8}
-                borderBottom={"1px"}
-                borderLeft={"1px"}
-                borderRight={"1px"}
-                borderColor={"blackAlpha.100"}
-              >
-                <Text>
-                  No one shall be subjected to arbitrary arrest, detention or
-                  exile. Everyone is entitled in full equality to a fair and
-                  public hearing by an independent and impartial tribunal, in
-                  the determination of his rights and obligations and of any
-                  criminal charge against him.
-                </Text>
-              </Flex>
             </Stack>
           </GridItem>
         </Grid>

@@ -374,13 +374,12 @@ export default function Home() {
                       </InputRightAddon>
                     </InputGroup>
 
-                    <Stack
+                    {/* <Stack
                       direction={"row"}
                       px={4}
                       spacing={4}
                       color={"green.500"}
                       fontSize={"10px"}
-                      textTransform={"uppercase"}
                       fontWeight={"500"}
                       pt={2}
                     >
@@ -388,7 +387,7 @@ export default function Home() {
                       <Text cursor={"pointer"}>Laravel dev</Text>
 
                       <Text cursor={"pointer"}>figma to react</Text>
-                    </Stack>
+                    </Stack> */}
                   </Stack>
                 </Box>
 
@@ -401,7 +400,7 @@ export default function Home() {
                       md: "block",
                     }}
                   >
-                    Advanced Searce
+                    Advanced Search
                   </Button>
                 </Box>
               </Flex>
@@ -412,17 +411,17 @@ export default function Home() {
                 my={8}
                 direction={["column", "row"]}
               >
-                <Flex>
+                <Flex fontSize={"sm"}>
                   <Icon
                     as={MdOutlineRssFeed}
                     color={"green.500"}
                     boxSize={6}
                     mr={2}
                   />
-                  <Box as={"span"} fontWeight={"500"} mr={1}>
+                  <Box as={"span"} fontWeight={"500"} mr={1} mt={1}>
                     4,567
                   </Box>
-                  Jobs found
+                  <Text mt={1}> jobs found</Text>
                 </Flex>
                 <Flex
                   justifyContent={"space-between"}
@@ -484,21 +483,94 @@ export default function Home() {
 
               <JobCard />
             </Grid>
-            <Flex
+            <Box
               p={8}
               borderBottom={"1px"}
               borderLeft={"1px"}
               borderRight={"1px"}
               borderColor={"blackAlpha.100"}
             >
-              <Text>
-                No one shall be subjected to arbitrary arrest, detention or
-                exile. Everyone is entitled in full equality to a fair and
-                public hearing by an independent and impartial tribunal, in the
-                determination of his rights and obligations and of any criminal
-                charge against him.
-              </Text>
-            </Flex>
+              <Flex justifyContent={"space-between"} alignItems={"center"}>
+                <Flex justifyContent={"space-between"} alignItems={"center"}>
+                  <Text whiteSpace={"nowrap"}>Jump to page :</Text>
+                  <Input
+                    size="sm"
+                    mx={2}
+                    placeholder="Page No.."
+                    focusBorderColor="green.500"
+                  />
+                </Flex>
+                <Flex gap={2} fontSize={"sm"}>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    First
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    ◀ Previous
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    1
+                  </Button>
+                  <Button colorScheme={"green"} size={"sm"} rounded={"full"}>
+                    2
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    3
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    size={"sm"}
+                    rounded={"full"}
+                    variant={"ghost"}
+                  >
+                    4
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    size={"sm"}
+                    rounded={"full"}
+                    variant={"ghost"}
+                  >
+                    ...
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    Next ▶
+                  </Button>
+                  <Button
+                    colorScheme={"green"}
+                    variant={"ghost"}
+                    size={"sm"}
+                    rounded={"full"}
+                  >
+                    Last
+                  </Button>
+                </Flex>
+              </Flex>
+            </Box>
           </GridItem>
         </Grid>
       </Box>

@@ -13,10 +13,13 @@ import {
   Heading,
   Icon,
   Stack,
+  Tag,
   Text,
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
+
+import { PiGenderFemaleBold } from "react-icons/pi";
 import {
   MdContentCopy,
   MdFavoriteBorder,
@@ -77,6 +80,7 @@ export default function JobCard() {
             <Icon as={MdFavoriteBorder} boxSize={6} color={"green.500"} />
           </Button>
         </Stack>
+
         <Stack
           onClick={() => onOpen()}
           bg="white"
@@ -92,7 +96,11 @@ export default function JobCard() {
             },
           }}
         >
-          <Flex justifyContent={"space-between"} alignItems={"center"}>
+          <Flex
+            justifyContent={"space-between"}
+            alignItems={"start"}
+            direction={"column"}
+          >
             <Text
               fontWeight={"500"}
               fontSize={"lg"}
@@ -105,8 +113,16 @@ export default function JobCard() {
                 textDecoration: "underline",
               }}
             >
-              🚀 Need a babysitter for two toddlers
+              Need a babysitter for two toddlers
             </Text>
+            <Flex gap={2} mt={3}>
+              <Tag size={"sm"} colorScheme={"green"}>
+                Open
+              </Tag>{" "}
+              <Tag size={"sm"} colorScheme={"red"}>
+                Closed
+              </Tag>
+            </Flex>
           </Flex>
           <Box>
             <Stack
@@ -136,7 +152,7 @@ export default function JobCard() {
               </Flex>
               <Flex gap={2} alignItems={"center"}>
                 <Icon
-                  as={MdFemale}
+                  as={PiGenderFemaleBold}
                   boxSize={4}
                   mt={1}
                   color={"green.500"}
@@ -160,6 +176,86 @@ export default function JobCard() {
                 </Text>
               </Flex>
             </Stack>
+            <Box mt={4}>
+              <Flex
+                mt={5}
+                gap={4}
+                flexWrap={"wrap"}
+              >
+                <Flex
+                  rounded={"full"}
+                  shadow={"xs"}
+                  height={"25px"}
+                  px={2}
+                  bg={"blackAlpha.100"}
+                  fontSize={"sm"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  cursor={"pointer"}
+                  textTransform={"capitalize"}
+                >
+                  <Text
+                    color={"blackAlpha.800"}
+                  >
+                    Web design
+                  </Text>
+                </Flex>
+                <Flex
+                  rounded={"full"}
+                  shadow={"xs"}
+                  height={"25px"}
+                  px={2}
+                  bg={"blackAlpha.100"}
+                  fontSize={"sm"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  cursor={"pointer"}
+                  textTransform={"capitalize"}
+                >
+                  <Text
+                    color={"blackAlpha.800"}
+                  >
+                    react
+                  </Text>
+                </Flex>
+                <Flex
+                  rounded={"full"}
+                  shadow={"xs"}
+                  height={"25px"}
+                  px={2}
+                  bg={"blackAlpha.100"}
+                  fontSize={"sm"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  cursor={"pointer"}
+                  textTransform={"capitalize"}
+                >
+                  <Text
+                    color={"blackAlpha.800"}
+                  >
+                    Chakra ui
+                  </Text>
+                </Flex>
+                <Flex
+                  rounded={"full"}
+                  shadow={"xs"}
+                  height={"25px"}
+                  px={2}
+                  bg={"blackAlpha.100"}
+                  fontSize={"sm"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  cursor={"pointer"}
+                  textTransform={"capitalize"}
+                >
+                  <Text
+                    color={"blackAlpha.800"}
+                  >
+                    +4
+                  </Text>
+                </Flex>
+              </Flex>
+            </Box>
           </Box>
         </Stack>
       </Box>
@@ -224,7 +320,7 @@ function DetailsDrawer({
                     fontSize={"xl"}
                     fontWeight={"500"}
                   >
-                   🚀 Need a babysitter for two toddlers
+                    🚀 Need a babysitter for two toddlers
                   </Heading>
                 </Box>
                 <Box
@@ -513,7 +609,7 @@ function DetailsDrawer({
                       gap={2}
                     >
                       <Icon
-                        as={MdFemale}
+                        as={PiGenderFemaleBold}
                         boxSize={4}
                         color={"green.500"}
                         mt={1}
@@ -585,9 +681,7 @@ function DetailsDrawer({
                   >
                     Activity on this job
                   </Text>
-                  <Stack spacing={2}
-                  fontSize={"sm"}
-                  >
+                  <Stack spacing={2} fontSize={"sm"}>
                     <Text>
                       Aplications :
                       <Box as="span" mx={2}>
