@@ -47,14 +47,14 @@ export default function Home() {
         }}
         mx={"auto"}
       >
-        <Grid templateColumns="repeat(12, 1fr)" gap={6} py={8}>
+        <Grid templateColumns="repeat(12, 1fr)" gap={6} py={12}>
           <GridItem
             colSpan={{
               base: 12,
               lg: 4,
             }}
           >
-            <Box px={8}>
+            <Box px={8} pb={8} pt={8} shadow={"xs"} bg={"white"}>
               <Text fontSize={"2xl"} fontWeight={"400"} mx={4} mt={0}>
                 Filter By
               </Text>
@@ -286,7 +286,7 @@ export default function Home() {
                   </AccordionPanel>
                 </AccordionItem>
 
-                <AccordionItem>
+                <AccordionItem borderBottom={"none"}>
                   <h2>
                     <AccordionButton>
                       <Box
@@ -352,9 +352,18 @@ export default function Home() {
               base: 12,
               lg: 8,
             }}
+            bg={"white"}
             shadow={"xs"}
           >
-            <Box p={8}>
+            <Box
+              pt={12}
+              px={8}
+              pb={8}
+              // borderTop={"1px"}
+              // borderLeft={"1px"}
+              // borderRight={"1px"}
+              // borderColor={"blackAlpha.100"}
+            >
               <Flex justifyContent={"start"} alignItems={"start"} gap={4}>
                 <Box w={"full"}>
                   <Stack direction={"column"} w={"full"} spacing={0}>
@@ -368,26 +377,20 @@ export default function Home() {
                       </InputRightAddon>
                     </InputGroup>
 
-                    <Stack direction={"row"} px={4} spacing={4}>
-                      <Text
-                        color={"green.500"}
-                        cursor={"pointer"}
-                      >
-                        react
-                      </Text>
-                      <Text
-                        color={"green.500"}
-                        cursor={"pointer"}
-                      >
-                        Laravel dev
-                      </Text>
+                    <Stack
+                      direction={"row"}
+                      px={4}
+                      spacing={4}
+                      color={"green.500"}
+                      fontSize={"10px"}
+                      textTransform={"uppercase"}
+                      fontWeight={"500"}
+                      pt={2}
+                    >
+                      <Text cursor={"pointer"}>react</Text>
+                      <Text cursor={"pointer"}>Laravel dev</Text>
 
-                      <Text
-                        color={"green.500"}
-                        cursor={"pointer"}
-                      >
-                        figma to react
-                      </Text>
+                      <Text cursor={"pointer"}>figma to react</Text>
                     </Stack>
                   </Stack>
                 </Box>
@@ -471,15 +474,11 @@ export default function Home() {
               </Flex>
             </Box>
             <Grid
-              px={{
-                base: "0",
-                md: "8",
-              }}
-              pb={8}
               templateColumns={{
                 base: "repeat(1, 1fr)",
                 md: `repeat(${gridCol}, 1fr)`,
               }}
+              px={"1px"}
             >
               <JobCard />
               <JobCard />
@@ -488,6 +487,21 @@ export default function Home() {
 
               <JobCard />
             </Grid>
+            <Flex
+              p={8}
+              borderBottom={"1px"}
+              borderLeft={"1px"}
+              borderRight={"1px"}
+              borderColor={"blackAlpha.100"}
+            >
+              <Text>
+                No one shall be subjected to arbitrary arrest, detention or
+                exile. Everyone is entitled in full equality to a fair and
+                public hearing by an independent and impartial tribunal, in the
+                determination of his rights and obligations and of any criminal
+                charge against him.
+              </Text>
+            </Flex>
           </GridItem>
         </Grid>
       </Box>

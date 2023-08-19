@@ -26,9 +26,9 @@ export default function Profile() {
           md: "10",
         }}
         mx={"auto"}
-        my={12}
+        py={12}
       >
-        <Box shadow="xs">
+        <Box shadow="xs" bg={"white"} >
           <Flex
             gap={4}
             justifyContent={"space-between"}

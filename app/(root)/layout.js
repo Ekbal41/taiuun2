@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }) {
   return (
     <>
       <RootNavbar />{" "}
-      <Box mx={"auto"} maxW={"container.8xl"}  >
+      <Box mx={"auto"} maxW={"container.8xl"} bg={"gray.100"}>
         {children}
       </Box>
       <Footer />
