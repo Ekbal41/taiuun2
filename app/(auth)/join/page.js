@@ -18,12 +18,7 @@ import Link from "next/link";
 
 export default function Join() {
   return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
+    <Flex minH={"100vh"} align={"center"} justify={"center"}>
       <Stack
         spacing={8}
         mx={"auto"}
@@ -34,8 +29,11 @@ export default function Join() {
         py={12}
       >
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}
-          color={"blackAlpha.800"}
+          <Heading
+            fontSize={"4xl"}
+            color={"blackAlpha.800"}
+            fontWeight={"500"}
+            className="font-mirza"
           >
             Join us now{" "}
             <Box as={"span"} color={"green.400"}>
@@ -43,28 +41,23 @@ export default function Join() {
             </Box>
           </Heading>
         </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"xs"}
-          p={8}
-        >
+        <Box rounded={"lg"} boxShadow={"xs"} p={8}>
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Full Name</FormLabel>
-              <Input type="email" focusBorderColor="green.500"/>
+              <Input type="email" focusBorderColor="green.500" />
             </FormControl>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" focusBorderColor="green.500"/>
+              <Input type="email" focusBorderColor="green.500" />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" focusBorderColor="green.500"/>
+              <Input type="password" focusBorderColor="green.500" />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password Again</FormLabel>
-              <Input type="password" focusBorderColor="green.500"/>
+              <Input type="password" focusBorderColor="green.500" />
             </FormControl>
             <Stack>
               <Button

@@ -33,6 +33,7 @@ export default function Home() {
           base: "4",
           md: "10",
         }}
+        py={8}
       >
         <Grid templateColumns="repeat(6, 1fr)" gap={4}>
           <GridItem
@@ -288,7 +289,7 @@ export default function Home() {
             }}
             py={4}
           >
-            <Stack spacing={4}>
+            <Stack spacing={0}>
               <Flex
                 bg="white"
                 px={6}
@@ -296,6 +297,7 @@ export default function Home() {
                 shadow={"xs"}
                 justifyContent={"space-between"}
                 alignItems={"center"}
+                mb={4}
               >
                 <Text
                   fontSize={"lg"}
@@ -322,6 +324,21 @@ export default function Home() {
               <JobCard />
               <JobCard />
               <JobCard />
+              <Flex
+                p={8}
+                borderBottom={"1px"}
+                borderLeft={"1px"}
+                borderRight={"1px"}
+                borderColor={"blackAlpha.100"}
+              >
+                <Text>
+                  No one shall be subjected to arbitrary arrest, detention or
+                  exile. Everyone is entitled in full equality to a fair and
+                  public hearing by an independent and impartial tribunal, in
+                  the determination of his rights and obligations and of any
+                  criminal charge against him.
+                </Text>
+              </Flex>
             </Stack>
           </GridItem>
         </Grid>

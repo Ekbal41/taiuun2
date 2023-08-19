@@ -28,7 +28,7 @@ export default function Footer() {
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(3, 1fr)",
-          lg: "repeat(5, 1fr)",
+          md: "repeat(5, 1fr)",
         }}
         gap={6}
         bg={"white"}
@@ -37,7 +37,7 @@ export default function Footer() {
         <GridItem w="100%">
           <Flex direction={"column"}>
             <Heading
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.800"}
               mb={3}
               fontWeight={500}
@@ -45,7 +45,7 @@ export default function Footer() {
               Categories
             </Heading>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -53,7 +53,7 @@ export default function Footer() {
               Programming
             </Link>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -62,7 +62,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -71,7 +71,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -83,7 +83,7 @@ export default function Footer() {
         <GridItem w="100%">
           <Flex direction={"column"}>
             <Heading
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.800"}
               mb={3}
               fontWeight={500}
@@ -91,7 +91,7 @@ export default function Footer() {
               Categories
             </Heading>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -99,7 +99,7 @@ export default function Footer() {
               Digital Marketing
             </Link>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -108,7 +108,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -117,7 +117,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -129,7 +129,7 @@ export default function Footer() {
         <GridItem w="100%">
           <Flex direction={"column"}>
             <Heading
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.800"}
               mb={3}
               fontWeight={500}
@@ -137,7 +137,7 @@ export default function Footer() {
               Categories
             </Heading>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -145,7 +145,7 @@ export default function Footer() {
               AI & ML
             </Link>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -154,7 +154,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -163,7 +163,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -175,7 +175,7 @@ export default function Footer() {
         <GridItem w="100%">
           <Flex direction={"column"}>
             <Heading
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.800"}
               mb={3}
               fontWeight={500}
@@ -183,7 +183,7 @@ export default function Footer() {
               Categories
             </Heading>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -191,7 +191,7 @@ export default function Footer() {
               Business
             </Link>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -200,7 +200,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -209,7 +209,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -221,7 +221,7 @@ export default function Footer() {
         <GridItem w="100%">
           <Flex direction={"column"}>
             <Heading
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.800"}
               mb={3}
               fontWeight={500}
@@ -229,7 +229,7 @@ export default function Footer() {
               Categories
             </Heading>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -237,7 +237,7 @@ export default function Footer() {
               Marketing
             </Link>
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -246,7 +246,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -255,7 +255,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              fontSize={"lg"}
+              fontSize={"md"}
               color={"blackAlpha.600"}
               mb={3}
               fontWeight={500}
@@ -281,14 +281,14 @@ export default function Footer() {
           <Flex
             gap={{
               base: "4",
-              lg: "6",
+              md: "6",
             }}
             alignItems={"center"}
           >
             <Text fontWeight={"bold"} fontSize={"3xl"} color={"blackAlpha.600"}>
               taiuun
             </Text>
-            <Text color={"blackAlpha.600"} mt={"8px"} fontSize={"lg"}>
+            <Text color={"blackAlpha.600"} mt={"8px"} fontSize={"md"}>
               © Taiuun Ltd
             </Text>
           </Flex>

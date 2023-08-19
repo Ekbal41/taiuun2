@@ -11,17 +11,12 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
+  
 } from "@chakra-ui/react";
 
 export default function Signin() {
   return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
+    <Flex minH={"100vh"} align={"center"} justify={"center"}>
       <Stack
         spacing={8}
         mx={"auto"}
@@ -32,16 +27,14 @@ export default function Signin() {
         py={12}
       >
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}
-          color={"blackAlpha.800"}
-          >Welcome Back 🎉</Heading>
+          <Heading fontSize={"4xl"} color={"blackAlpha.800"}
+          fontWeight={"500"}
+          className="font-mirza"
+          >
+            Welcome Back 🎉
+          </Heading>
         </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"xs"}
-          p={8}
-        >
+        <Box rounded={"lg"} p={8} shadow={"xs"}>
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>

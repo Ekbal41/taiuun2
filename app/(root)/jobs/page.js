@@ -54,7 +54,7 @@ export default function Home() {
               lg: 4,
             }}
           >
-            <Box px={8} pb={8} pt={8} shadow={"xs"} bg={"white"}>
+            <Box px={8} pb={8} pt={8}>
               <Text fontSize={"2xl"} fontWeight={"400"} mx={4} mt={0}>
                 Filter By
               </Text>
@@ -353,16 +353,13 @@ export default function Home() {
               lg: 8,
             }}
             bg={"white"}
-            shadow={"xs"}
           >
             <Box
-              pt={12}
-              px={8}
-              pb={8}
-              // borderTop={"1px"}
-              // borderLeft={"1px"}
-              // borderRight={"1px"}
-              // borderColor={"blackAlpha.100"}
+              p={8}
+              borderTop={"1px"}
+              borderLeft={"1px"}
+              borderRight={"1px"}
+              borderColor={"blackAlpha.100"}
             >
               <Flex justifyContent={"start"} alignItems={"start"} gap={4}>
                 <Box w={"full"}>
