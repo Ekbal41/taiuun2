@@ -20,7 +20,7 @@ import NavDrawer from "./NavDrawer";
 import { useRef } from "react";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function AdminNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
