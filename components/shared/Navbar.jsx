@@ -23,10 +23,9 @@ import {
   MdPhotoCamera,
   MdRoute,
   MdSupportAgent,
-  MdSystemSecurityUpdateGood,
 } from "react-icons/md";
 
-export default function RootNavbar() {
+export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
