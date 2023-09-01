@@ -27,6 +27,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaBoxOpen, FaTrashAlt } from "react-icons/fa";
+import { MdOutlineCreditCard } from "react-icons/md";
 
 export default function ClosedJobs() {
   return (
@@ -47,7 +48,7 @@ export default function ClosedJobs() {
           fontWeight={"light"}
           className="font-mirza"
         >
-          Closed Jobs <Badge colorScheme="red" p={1}>Unpaid</Badge>
+          Closed Jobs
         </Heading>
         <Flex
           justifyContent={"flex-end"}
@@ -71,13 +72,14 @@ export default function ClosedJobs() {
                   <Th>Job Name</Th>
                   <Th>Confirmed To</Th>
                   <Th>Job Location</Th>
+                  <Th>Total Aplicants</Th>
                   <Th isNumeric>Actions</Th>
                 </Tr>
               </Thead>
               <Tbody>
                 <Tr>
                   <Td>
-                    3 Jan 2021
+                    3 Jan 2021 <Badge colorScheme="blue" >New</Badge>
                   </Td>
 
                   <Td>
@@ -90,7 +92,7 @@ export default function ClosedJobs() {
                         textTransform={"capitalize"}
                       >
                         <Badge me={1} colorScheme="purple">23453</Badge>
-                        Marketing Manager
+                       Need Teacher for my son
                         <Icon as={ExternalLinkIcon} />
                       </Box>
                     </Link>
@@ -112,6 +114,21 @@ export default function ClosedJobs() {
                     </Link>
                   </Td>
                   <Td>Dhaka, Bangladesh</Td>
+                  <Td>
+                  <Link href="#">
+                      <Tooltip
+                        label="Given to Mr. Enayet Rahman out of 4 aplicants"
+                        placement="top"
+                        hasArrow
+                        bg={"green.500"}
+                        color={"white"}
+                        px={3}
+                        py={2}
+                      >
+                        <Badge me={1} colorScheme="green">4 Aplicants</Badge>
+                      </Tooltip>
+                    </Link>
+                  </Td>
 
                   <Td
                     isNumeric
@@ -128,6 +145,19 @@ export default function ClosedJobs() {
                       >
                         <IconButton size="sm" color={"purple.500"}>
                           <Icon as={FaBoxOpen} />
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip
+                        label="Payment Details"
+                        placement="top"
+                        hasArrow
+                        bg={"green.500"}
+                        color={"white"}
+                        px={3}
+                        py={2}
+                      >
+                        <IconButton size="sm" color={"green.500"}>
+                          <Icon as={MdOutlineCreditCard} />
                         </IconButton>
                       </Tooltip>
                       <Tooltip
@@ -183,6 +213,21 @@ export default function ClosedJobs() {
                     </Link>
                   </Td>
                   <Td>Dhaka, Bangladesh</Td>
+                  <Td>
+                    <Link href="#">
+                      <Tooltip
+                        label="Given to Mr. Enayet Rahman out of 12 aplicants"
+                        placement="top"
+                        hasArrow
+                        bg={"green.500"}
+                        color={"white"}
+                        px={3}
+                        py={2}
+                      >
+                        <Badge me={1} colorScheme="green">12 Aplicants</Badge>
+                      </Tooltip>
+                    </Link>
+                  </Td>
 
                   <Td
                     isNumeric
@@ -199,6 +244,19 @@ export default function ClosedJobs() {
                       >
                         <IconButton size="sm" color={"purple.500"}>
                           <Icon as={FaBoxOpen} />
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip
+                        label="Payment Details"
+                        placement="top"
+                        hasArrow
+                        bg={"green.500"}
+                        color={"white"}
+                        px={3}
+                        py={2}
+                      >
+                        <IconButton size="sm" color={"green.500"}>
+                          <Icon as={MdOutlineCreditCard} />
                         </IconButton>
                       </Tooltip>
                       <Tooltip
