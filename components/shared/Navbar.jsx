@@ -2,6 +2,7 @@
 
 import { ChevronDownIcon, HamburgerIcon, SunIcon } from "@chakra-ui/icons";
 import {
+  Avatar,
   Box,
   Button,
   Flex,
@@ -9,6 +10,7 @@ import {
   Icon,
   Menu,
   MenuButton,
+  MenuDivider,
   MenuItem,
   MenuList,
   Text,
@@ -24,10 +26,16 @@ import {
   MdRoute,
   MdSupportAgent,
 } from "react-icons/md";
+import { auth } from "../../firebase/fire";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+
+  const handleLogout = () => {
+    console.log(auth.currentUser.email);
+    console.log("logout");
+  };
 
   return (
     <>
@@ -100,154 +108,138 @@ export default function Navbar() {
                   Find Job
                 </Text>
               </Link>
-              <Link
-                href={"/profile"}
-              >
-                <Text
-                  cursor={"pointer"}
-                  py={"2"}
-                  px={"4"}
-                  rounded={"lg"}
-                  fontWeight={"500"}
-                  _hover={{
-                    bg: "gray.50",
-                  }}
-                  color={"gray.600"}
-                  fontSize={"16px"}
-                >
-                  Profile
-                </Text>
-              </Link>
-
-              <Text
-                cursor={"pointer"}
-                py={"2"}
-                px={"4"}
-                rounded={"lg"}
-                fontWeight={"500"}
-                _hover={{
-                  bg: "gray.50",
-                }}
-                color={"gray.600"}
-                fontSize={"16px"}
-              >
-                Become a Seller
-              </Text>
-              <Menu isLazy>
-                <MenuButton
-                  color={"gray.600"}
-                  py={"2"}
-                  px={"4"}
-                  rounded={"lg"}
-                  fontWeight={"500"}
-                  fontSize={"16px"}
-                  _hover={{
-                    bg: "gray.50",
-                  }}
-                >
-                  Category <Icon as={ChevronDownIcon} />
-                </MenuButton>
-                <MenuList>
-                  {/* MenuItems are not rendered unless Menu is open */}
-                  <MenuItem
-                    fontSize={"16px"}
-                  >                    <Icon
-                      as={MdDevices}
-                      boxSize={5}
-                      mr={2}
-                      color={"blue.500"}
-                    />
-                    Web Development
-                  </MenuItem>
-                  <MenuItem
-                    fontSize={"16px"}
-                  >                    <Icon as={MdRoute} boxSize={5} mr={2} color={"red.500"} />
-                    UI/UX Design
-                  </MenuItem>
-                  <MenuItem
-                    fontSize={"16px"}
-                  >                    <Icon
-                      as={MdSupportAgent}
-                      boxSize={5}
-                      mr={2}
-                      color={"orange.500"}
-                    />
-                    Digital Marketing
-                  </MenuItem>
-                  <MenuItem
-                    fontSize={"16px"}
-                  >                    <Icon
-                      as={SunIcon}
-                      boxSize={5}
-                      mr={2}
-                      color={"yellow.500"}
-                    />
-                    Data Science
-                  </MenuItem>
-                  <MenuItem
-                    fontSize={"16px"}
-                  >                    <Icon
-                      as={MdOutlineTabletAndroid}
-                      boxSize={5}
-                      mr={2}
-                      color={"cyan.500"}
-                    />
-                    Mobile Development
-                  </MenuItem>
-                  <MenuItem
-                    fontSize={"16px"}
-                  >
-                    <Icon
-                      as={MdPhotoCamera}
-                      boxSize={5}
-                      mr={2}
-                      color={"teal.500"}
-                    />
-                    Photography
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-              <Link href="/dashboard">
-                <Text
-                  py={"2"}
-                  px={"4"}
-                  rounded={"lg"}
-                  fontWeight={"500"}
-                  _hover={{
-                    bg: "gray.50",
-                  }}
-                  color={"gray.600"}
-                  fontSize={"16px"}
-                >
-                  Dashboard
-                </Text>
-              </Link>
-              <Link href="/signin">
-                <Text
-                  cursor={"pointer"}
-                  py={"2"}
-                  px={"4"}
-                  rounded={"lg"}
-                  fontWeight={"500"}
-                  _hover={{
-                    bg: "gray.50",
-                  }}
-                  color={"gray.600"}
-                  fontSize={"16px"}
-                >
-                  Sign In
-                </Text>
-              </Link>
-              <Link href="/join">
-                <Button
-                  ml={4}
-                  textTransform={"uppercase"}
-                  colorScheme="green"
-                  fontSize={"16px"}
-                >
-                  Join
-                </Button>
-              </Link>
+              {auth?.currentUser?.email
+                ? (
+                  <>
+                    <Link href="/dashboard">
+                      <Text
+                        py={"2"}
+                        px={"4"}
+                        rounded={"lg"}
+                        fontWeight={"500"}
+                        _hover={{
+                          bg: "gray.50",
+                        }}
+                        color={"gray.600"}
+                        fontSize={"16px"}
+                      >
+                        Dashboard
+                      </Text>
+                    </Link>
+                    <Flex
+                      alignItems={"center"}
+                    >
+                      <Menu isLazy>
+                        <MenuButton
+                          ml={"4"}
+                        >
+                          <Avatar
+                            h={"35px"}
+                            w={"35px"}
+                            name="Ryan Florence"
+                            src="https://bit.ly/ryan-florence"
+                          />
+                        </MenuButton>
+                        <MenuList width={"270px"}>
+                          {/* MenuItems are not rendered unless Menu is open */}
+                          <Box px={"4"}>
+                            <Flex
+                              alignItems={"center"}
+                              gap="2"
+                              mt={"6"}
+                              mb={"4"}
+                            >
+                              <Avatar
+                                h={"40px"}
+                                w={"40px"}
+                                name="Ryan Florence"
+                                src="https://bit.ly/ryan-florence"
+                              />
+                              <Box
+                                lineHeight={"1.2"}
+                              >
+                                <Text mb={"0"} fontWeight={"500"}>
+                                  Asif Ekbal
+                                </Text>
+                                <Text
+                                  color={"blackAlpha.700"}
+                                  fontSize={16}
+                                >
+                                  asifekbal@gmail.com
+                                </Text>
+                              </Box>
+                            </Flex>
+                            <Button
+                              w={"full"}
+                              my={"4"}
+                              size={"lg"}
+                              border={"1px"}
+                              bg={"white"}
+                              h={"37px"}
+                              color={"blackAlpha.800"}
+                              fontSize={"16px"}
+                              borderRadius={"sm"}
+                              _hover={{
+                                bg: "gray.700",
+                                color: "white",
+                              }}
+                            >
+                              Become An Employee
+                            </Button>
+                          </Box>
+                          <Box
+                            fontSize={"16px"}
+                          >
+                            <MenuDivider />
+                            <MenuItem>
+                              <Link href={"/profile"}>Profile</Link>
+                            </MenuItem>
+                            <MenuItem>Settings</MenuItem>
+                            <MenuDivider />
+                            <MenuItem>Docs</MenuItem>
+                            <MenuItem>FAQ</MenuItem>
+                            <MenuDivider />
+                            <MenuItem
+                              onClick={handleLogout}
+                            >
+                              Logout
+                            </MenuItem>
+                          </Box>
+                        </MenuList>
+                      </Menu>
+                    </Flex>
+                  </>
+                )
+                : (
+                  <>
+                    <Link href="/signin">
+                      <Text
+                        cursor={"pointer"}
+                        py={"2"}
+                        px={"4"}
+                        rounded={"lg"}
+                        fontWeight={"500"}
+                        _hover={{
+                          bg: "gray.50",
+                        }}
+                        color={"gray.600"}
+                        fontSize={"16px"}
+                      >
+                        Sign In
+                      </Text>
+                    </Link>
+                    <Link href="/join">
+                      <Button
+                        ml={4}
+                        textTransform={"uppercase"}
+                        colorScheme="green"
+                        fontSize={"16px"}
+                      >
+                        Join
+                      </Button>
+                    </Link>
+                  </>
+                )}
             </Flex>
           </Flex>
         </Flex>
