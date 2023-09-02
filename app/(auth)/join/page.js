@@ -97,26 +97,31 @@ export default function Join() {
         }}
         py={12}
       >
-        <Stack align={"center"}>
-          <Heading
-            fontSize={"4xl"}
-            color={"blackAlpha.800"}
-            fontWeight={"500"}
-            className="font-mirza"
-          >
-            Join us now{" "}
-            <Box as={"span"} color={"green.400"}>
-              !
-            </Box>
-          </Heading>
-        </Stack>
-        <Box rounded={"lg"} boxShadow={"xs"} p={8}>
-          <Stack spacing={4}>
+
+        <Box rounded={"lg"} px={12}
+          pb={8}
+          pt={6}
+          shadow={"xs"}
+
+        >
+          <Stack spacing={6}>
+            <Heading
+              fontSize={"4xl"}
+              color={"blackAlpha.800"}
+              fontWeight={"500"}
+              className="font-mirza"
+              textAlign={"center"}
+            >
+              Join us now{" "}
+              <Box as={"span"} color={"green.400"}>
+                !
+              </Box>
+            </Heading>
             <FormControl id="name">
-              <FormLabel>Full Name</FormLabel>
               <Input
                 type="text"
                 focusBorderColor="green.500"
+                placeholder="Name"
                 onChange={(e) =>
                   setSignUpData({ ...signUpData, name: e.target.value })}
               />
@@ -129,10 +134,10 @@ export default function Join() {
               </Text>
             </FormControl>
             <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
               <Input
                 type="email"
                 focusBorderColor="green.500"
+                placeholder="Email"
                 onChange={(e) =>
                   setSignUpData({ ...signUpData, email: e.target.value })}
               />
@@ -145,10 +150,10 @@ export default function Join() {
               </Text>
             </FormControl>
             <FormControl id="password">
-              <FormLabel>Password</FormLabel>
               <Input
                 type="password"
                 focusBorderColor="green.500"
+                placeholder="Password"
                 onChange={(e) =>
                   setSignUpData({ ...signUpData, password: e.target.value })}
               />
@@ -161,10 +166,10 @@ export default function Join() {
               </Text>
             </FormControl>
             <FormControl id="password">
-              <FormLabel>Password Again</FormLabel>
               <Input
                 type="password"
                 focusBorderColor="green.500"
+                placeholder="Password Again"
                 onChange={(e) =>
                   setSignUpData({
                     ...signUpData,
@@ -192,7 +197,7 @@ export default function Join() {
                 {loading ? "Creating Account..." : "Sign Up"}
               </Button>
               <Link href="/signin">
-                <Text color={"green.400"} textAlign={"center"}>
+                <Text color={"green.400"} textAlign={"center"} mt={2}>
                   Already have an account?
                 </Text>
               </Link>

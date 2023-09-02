@@ -15,9 +15,10 @@ import {
   MenuList,
   Text,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import NavDrawer from "./NavDrawer";
-import { useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import {
   MdDevices,
@@ -27,14 +28,39 @@ import {
   MdSupportAgent,
 } from "react-icons/md";
 import { auth } from "../../firebase/fire";
+import { signOut } from "firebase/auth";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [_, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
   const btnRef = useRef();
+  const toast = useToast();
 
   const handleLogout = () => {
-    console.log(auth.currentUser.email);
-    console.log("logout");
+    signOut(auth)
+      .then(() => {
+        forceUpdate();
+        toast({
+          title: "Message",
+          description: "Logged out successfully",
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        toast({
+          title: "Error",
+          description: "Something went wrong",
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+          position: "top-right",
+        });
+      });
   };
 
   return (

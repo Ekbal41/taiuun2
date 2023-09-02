@@ -95,23 +95,28 @@ export default function Signin() {
         }}
         py={12}
       >
-        <Stack align={"center"}>
-          <Heading
-            fontSize={"4xl"}
-            color={"blackAlpha.800"}
-            fontWeight={"500"}
-            className="font-mirza"
-          >
-            Welcome Back 🎉
-          </Heading>
-        </Stack>
-        <Box rounded={"lg"} p={8} shadow={"xs"}>
-          <Stack spacing={4}>
+
+        <Box rounded={"lg"} px={12}
+          pt={4} pb={12}
+         shadow={"xs"}
+        >
+
+          <Stack spacing={6}>
+            <Text
+              fontSize={"4xl"}
+              color={"blackAlpha.800"}
+              fontWeight={"500"}
+              className="font-mirza"
+              textAlign={"center"}
+              mb={1}
+            >
+              Sign In to Taiuun
+            </Text>
             <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
               <Input
                 type="email"
                 focusBorderColor="green.500"
+                placeholder="Your Email"
                 onChange={(e) =>
                   setSignInData({ ...signInData, email: e.target.value })}
               />
@@ -124,10 +129,10 @@ export default function Signin() {
               </Text>
             </FormControl>
             <FormControl id="password">
-              <FormLabel>Password</FormLabel>
               <Input
                 type="password"
                 focusBorderColor="green.500"
+                placeholder="Your Password"
                 onChange={(e) =>
                   setSignInData({ ...signInData, password: e.target.value })}
               />
